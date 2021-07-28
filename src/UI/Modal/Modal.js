@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import styled from "styled-components";
+import swipeIcon from "../../assets/swipe.png";
 import closeIcon from "../../assets/closeIcon.png";
 import { useSwipeable } from "react-swipeable";
 import documentIcon from "../../assets/document.png";
@@ -52,6 +53,14 @@ const StyledMainContentWrapper = styled.div`
   text-align: center;
 `;
 
+const StyledSwipeIcon = styled.img`
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+`;
+
 const StyledMainImage = styled.div`
   background-image: url(${({ background }) => background});
   background-size: contain;
@@ -66,14 +75,23 @@ const StyledThumbnailWrapper = styled.div`
   margin: auto;
   width: 100%;
   height: fit-content;
+  border-top: 2px solid black;
 `;
 
 const StyledThumbnail = styled.img`
   border: ${(props) => (props.isFocus ? "2px solid green" : "none")};
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   margin: 5px;
   cursor: pointer;
+  @media (min-width: 500px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (min-width: 700px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
@@ -83,6 +101,7 @@ const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
   const isContentImage = typeof contentArray[mainContentIndex] === "string";
 
   // probably shouldn't do this, feels hacky.
+  // prevents scrolling of page while modal is open.
   if (isVisible) {
     document.body.style.overflow = "hidden";
   } else {
@@ -153,6 +172,7 @@ const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
         />
         <StyledContent>
           <StyledMainContentWrapper>
+            <StyledSwipeIcon src={swipeIcon} alt="swiping enabled" />
             {isContentImage ? (
               <StyledMainImage background={contentArray[mainContentIndex]} />
             ) : (
