@@ -73,6 +73,9 @@ export const SocialIconsContainer = styled.div`
   @media (min-width: 900px) {
     width: 50%;
   }
+  a {
+    margin: auto;
+  }
 `;
 
 export const SocialIcon = styled.img`

@@ -4,6 +4,7 @@ import githubIcon from "../../assets/github.jpeg";
 import linkedinIcon from "../../assets/linkedin.png";
 import downloadCVIcon from "../../assets/cvicon.jpeg";
 import whiteDownArrowIcon from "../../assets/whiteDownArrow.png";
+import FileSaver from "file-saver";
 import {
   HomeWrapper,
   Background,
@@ -20,6 +21,11 @@ import {
 } from "./HomeStyles";
 
 export default function Home({ scrollIntoView }) {
+  const saveFile = () =>
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resource/Karl_Warner_CV.pdf",
+      "Karl_Warner_CV.pdf"
+    );
   return (
     <HomeWrapper>
       <Background src={background} alt="home-background" />
@@ -39,9 +45,25 @@ export default function Home({ scrollIntoView }) {
       <WelcomeElementsContainer>
         <HelloText>HELLO</HelloText>
         <SocialIconsContainer>
-          <SocialIcon src={downloadCVIcon} alt="download cv link" />
-          <SocialIcon src={githubIcon} alt="github profile link" />
-          <SocialIcon src={linkedinIcon} alt="linked in profile link" />
+          <SocialIcon
+            src={downloadCVIcon}
+            alt="download cv link"
+            onClick={saveFile}
+          />
+          <a
+            href="https://github.com/Kwarn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={githubIcon} alt="github profile link" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/karl-warner-9147661b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={linkedinIcon} alt="linked in profile link" />
+          </a>
           <DownArrow
             onClick={() => scrollIntoView("about")}
             src={whiteDownArrowIcon}
