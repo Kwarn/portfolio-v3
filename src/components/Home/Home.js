@@ -44,33 +44,33 @@ export default function Home({ scrollIntoView }) {
       </MenuOptionsContainer>
       <WelcomeElementsContainer>
         <HelloText>HELLO</HelloText>
-        <SocialIconsContainer>
-          <SocialIcon
-            src={downloadCVIcon}
-            alt="download cv link"
-            onClick={saveFile}
-          />
-          <a
-            href="https://github.com/Kwarn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon src={githubIcon} alt="github profile link" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/karl-warner-9147661b5/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon src={linkedinIcon} alt="linked in profile link" />
-          </a>
-          <DownArrow
-            onClick={() => scrollIntoView("about")}
-            src={whiteDownArrowIcon}
-            alt="scroll down arrow"
-          />
-        </SocialIconsContainer>
+        <DownArrow
+          onClick={() => scrollIntoView("about")}
+          src={whiteDownArrowIcon}
+          alt="scroll down arrow"
+        />
       </WelcomeElementsContainer>
+      <SocialIconsContainer>
+        <SocialIcon
+          src={downloadCVIcon}
+          alt="download cv link"
+          onClick={saveFile}
+        />
+        <a
+          href="https://github.com/Kwarn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon src={githubIcon} alt="github profile link" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/karl-warner-9147661b5/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SocialIcon src={linkedinIcon} alt="linked in profile link" />
+        </a>
+      </SocialIconsContainer>
       <Intersection>
         <TriangleIntersectionLeft />
         <TriangleIntersectionRight />
