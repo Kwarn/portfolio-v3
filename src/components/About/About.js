@@ -5,8 +5,15 @@ import {
   AboutMeHeader,
   AboutMeText,
   Grid,
+  Slope,
+  Ball1,
+  Ball2,
+  Ball3,
+  Ball4,
+  SweepingArrow,
 } from "./AboutStyles";
 import profileImage from "../../assets/profileImage.png";
+import sweepingLeftArrow from "../../assets/sweepingleftwhitearrow.png";
 
 export default function About({ aboutRef }) {
   return (
@@ -23,6 +30,13 @@ export default function About({ aboutRef }) {
           team, to which I can contribute and grow with.
         </AboutMeText>
       </Grid>
+      <Slope />
+      <Ball1 />
+      <Ball2 />
+      <Ball4 />
+      <Ball3>
+        <SweepingArrow src={sweepingLeftArrow} />
+      </Ball3>
     </AboutWrapper>
   );
 }
