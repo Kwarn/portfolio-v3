@@ -39,20 +39,72 @@ export default function Education({ educationRef, modalHandler }) {
           key to maintaining consistent progress, positivity and motivation;
         </p>
       </TextSectionsContainer>
-      <ImagesContainer
-        onClick={() =>
-          modalHandler({
-            isVisible: true,
-            contentArray: certificates,
-          })
-        }
-      >
-        <Image src={nodeCertificate} alt="certificate" />
-        <Image src={typescriptCertificate} alt="certificate" />
-        <Image src={reactCertificate} alt="certificate" />
-        <Image src={javascriptCertificate} alt="certificate" />
-        <Image src={freeCodeCampCertificate} alt="certificate" />
-        <Image src={sqlCodeAcademyCertificate} alt="certificate" />
+      <ImagesContainer>
+        <Image
+          src={nodeCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+            })
+          }
+        />
+        <Image
+          src={typescriptCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+              startingIndex: 1,
+            })
+          }
+        />
+        <Image
+          src={reactCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+              startingIndex: 2,
+            })
+          }
+        />
+        <Image
+          src={javascriptCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+              startingIndex: 3,
+            })
+          }
+        />
+        <Image
+          src={freeCodeCampCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+              startingIndex: 4,
+            })
+          }
+        />
+        <Image
+          src={sqlCodeAcademyCertificate}
+          alt="certificate"
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: certificates,
+              startingIndex: 5,
+            })
+          }
+        />
       </ImagesContainer>
     </EducationWrapper>
   );

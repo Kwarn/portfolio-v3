@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import styled from "styled-components";
 import closeIcon from "../../assets/closeIcon.png";
@@ -76,7 +76,7 @@ const StyledThumbnail = styled.img`
   cursor: pointer;
 `;
 
-const Modal = ({ isVisible, closeFn, contentArray = [] }) => {
+const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
   const [mainContentIndex, setMainContentIndex] = useState(0);
   let thumbnails = [];
   const isMultipleContent = contentArray.length > 1;
@@ -130,6 +130,10 @@ const Modal = ({ isVisible, closeFn, contentArray = [] }) => {
   const imageResetHelperFn = () => {
     setMainContentIndex(0);
   };
+
+  useEffect(() => {
+    if (startingIndex) setMainContentIndex(startingIndex);
+  }, [startingIndex]);
 
   return (
     <>
