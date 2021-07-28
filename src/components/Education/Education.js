@@ -41,7 +41,7 @@ export default function Education({ educationRef, modalHandler }) {
         <p>
           I've found by challenging myself to code first wherever possible,
           avoiding copy/pasting of code, taking detailed notes and utilizing the
-          'rubber ducky' method that I'm able to better understand and retain
+          'rubber ducky' method, I'm able to better understand and retain
           knowledge. This approach has been key to maintaining consistent
           progress, positivity and motivation;
         </p>
