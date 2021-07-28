@@ -20,36 +20,21 @@ export const TextSectionsContainer = styled.div`
   margin: 15vh auto 10vh auto;
   font-family: "Ruluko";
   h2 {
-    mix-blend-mode: difference;
+    font-size: 5vw;
   }
   p {
-    mix-blend-mode: difference;
     font-weight: 300;
     line-height: 30px;
   }
-`;
-
-export const CircleBackgroundYellow = styled.div`
-  overflow: hidden;
-  position: absolute;
-  z-index: -2;
-  top: -30%;
-  left: calc(100% - 70%);
-  height: 350px;
-  width: 100%;
-  border-radius: 50%;
-  /* background-image: linear-gradient(to left, orange, yellow); */
-`;
-export const CircleBackgroundRed = styled.div`
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-  top: -35%;
-  right: calc(100% - 70%);
-  height: 350px;
-  width: 100%;
-  border-radius: 50%;
-  background-image: linear-gradient(to top, yellow, orange);
+  @media (min-width: 900px) {
+    margin: 15vh auto 10vh 20vw;
+    h1 {
+      font-size: 2vw;
+    }
+    p {
+      max-width: 500px;
+    }
+  }
 `;
 
 export const Image = styled.img`
@@ -57,4 +42,8 @@ export const Image = styled.img`
   width: 95%;
   height: auto;
   z-index: 2;
+
+  @media (min-width: 900px) {
+    width: 60%;
+  }
 `;
