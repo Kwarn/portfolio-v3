@@ -163,7 +163,7 @@ export const TriangleIntersectionLeft = styled.div`
   left: 0;
   width: 0;
   height: 0;
-  border-top: 20vw solid transparent;
+  border-top: 10vw solid transparent;
   /* border-bottom: 0px solid transparent; */
   border-left: 50vw solid #2b364a;
 `;
@@ -174,7 +174,7 @@ export const TriangleIntersectionRight = styled.div`
   right: 0;
   width: 0;
   height: 0;
-  border-top: 20vw solid transparent;
+  border-top: 10vw solid transparent;
   /* border-bottom: 0px solid transparent; */
   border-right: 50vw solid #2b364a;
 `;

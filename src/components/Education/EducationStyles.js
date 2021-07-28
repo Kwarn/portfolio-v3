@@ -23,6 +23,13 @@ export const EducationHeader = styled.div`
     z-index: 2;
     margin: auto auto 0 auto;
   }
+  @media (min-width: 1200px) {
+    background-position: center;
+    h1 {
+      margin: auto;
+      font-size: 60px;
+    }
+  }
 `;
 
 export const TextSectionsContainer = styled.div`
@@ -40,6 +47,12 @@ export const TextSectionsContainer = styled.div`
 
   @media (min-width: 700px) {
     width: 60%;
+  }
+  @media (min-width: 1200px) {
+    margin: 10vh auto;
+    p {
+      font-size: 20px;
+    }
   }
 `;
 

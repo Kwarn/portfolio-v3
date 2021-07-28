@@ -10,6 +10,9 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectTitle = styled.h1`
   margin: auto auto 0 auto;
+  @media (min-width: 1200px) {
+    font-size: 50px;
+  }
 `;
 
 export const ProjectDescription = styled.p`
@@ -21,6 +24,11 @@ export const ProjectDescription = styled.p`
     width: 70%;
     line-height: 30px;
   }
+  @media (min-width: 1200px) {
+    width: 50%;
+    line-height: 30px;
+    font-size: 18px;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -30,4 +38,7 @@ export const LinksContainer = styled.div`
 
 export const Link = styled.a`
   margin: 0 10px auto 10px;
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
 `;

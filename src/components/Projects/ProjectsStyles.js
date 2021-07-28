@@ -34,6 +34,16 @@ export const TextContainer = styled.div`
       text-align: left;
     }
   }
+  @media (min-width: 1200px) {
+    max-width: 600px;
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
 `;
 
 export const ProjectTile = styled.div`
@@ -63,6 +73,15 @@ export const ProjectTile = styled.div`
 
   @media (min-width: 900px) {
     max-width: 40%;
+  }
+  @media (min-width: 1200px) {
+    max-width: 600px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
 `;
 
