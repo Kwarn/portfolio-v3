@@ -11,9 +11,10 @@ export default function Designs({ designsRef }) {
       <TextSectionsContainer ref={designsRef}>
         <h2>UI/UX Designs</h2>
         <p>
-          Having discovered Figma.com, I've been further improving my design
-          skills by experimenting with the core principles of visual hierarchy,
-          spacing & font choice. Below are some of my recent examples.
+          Having discovered the power of Figma.com, I've been further improving
+          my design skills by experimenting with the core principles of visual
+          hierarchy, spacing & font choice. Below are some of my recent
+          examples.
         </p>
       </TextSectionsContainer>
 
