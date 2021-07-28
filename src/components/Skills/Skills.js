@@ -28,9 +28,9 @@ export default function Skills({ skillsRef }) {
           <p>Figma, Inkscape, Pinta, Gimp.</p>
         </SkillContainer>
       </SkillsContainer>
-      <Intersection>
+      {/* <Intersection>
         <TriangleIntersection />
-      </Intersection>
+      </Intersection> */}
     </SkillsWrapper>
   );
 }

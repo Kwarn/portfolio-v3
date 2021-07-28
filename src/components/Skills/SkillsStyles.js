@@ -19,6 +19,9 @@ export const SkillsContainer = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
   }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 `;
 
 export const SkillContainer = styled.div`
@@ -36,6 +39,15 @@ export const SkillContainer = styled.div`
   @media (min-width: 900px) {
     margin: 0 auto;
     max-width: 200px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 250px;
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
 `;
 
