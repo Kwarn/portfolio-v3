@@ -39,12 +39,13 @@ export default function Home({ scrollIntoView }) {
       <WelcomeElementsContainer>
         <HelloText>HELLO</HelloText>
         <SocialIconsContainer>
-          <SocialIcon src={downloadCVIcon} />
-          <SocialIcon src={githubIcon} />
-          <SocialIcon src={linkedinIcon} />
+          <SocialIcon src={downloadCVIcon} alt="download cv link" />
+          <SocialIcon src={githubIcon} alt="github profile link" />
+          <SocialIcon src={linkedinIcon} alt="linked in profile link" />
           <DownArrow
             onClick={() => scrollIntoView("about")}
             src={whiteDownArrowIcon}
+            alt="scroll down arrow"
           />
         </SocialIconsContainer>
       </WelcomeElementsContainer>

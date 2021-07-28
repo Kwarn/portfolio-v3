@@ -29,6 +29,7 @@ export const MenuOptionsContainer = styled.div`
 `;
 
 export const MenuOption = styled.p`
+  z-index: 3;
   cursor: pointer;
   font-size: 5vw;
   color: #eee;

@@ -13,6 +13,7 @@ function App() {
   const [modalControl, setModalControl] = useState({
     isVisible: false,
     contentArray: [],
+    startingIndex: 0,
   });
 
   useEffect(() => {
@@ -23,10 +24,11 @@ function App() {
     });
   }, []);
 
-  const modalHandler = ({ isVisible, contentArray }) => {
+  const modalHandler = ({ isVisible, contentArray, startingIndex }) => {
     setModalControl({
       isVisible,
       contentArray,
+      startingIndex,
     });
   };
 
@@ -34,6 +36,7 @@ function App() {
     setModalControl({
       isVisible: false,
       contentArray: [],
+      startingIndex: 0,
     });
   };
 
@@ -56,11 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <Modal
-        closeFn={closeModalHandler}
-        isVisible={modalControl.isVisible}
-        contentArray={modalControl.contentArray}
-      />
+      <Modal closeFn={closeModalHandler} {...modalControl} />
       <Home scrollIntoView={(refName) => scrollIntoView(refName)} />
       <About aboutRef={elementRefs.about} />
       <Skills skillsRef={elementRefs.skills} />
