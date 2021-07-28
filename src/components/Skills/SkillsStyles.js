@@ -10,24 +10,32 @@ export const SkillsWrapper = styled.div`
 `;
 
 export const SkillsContainer = styled.div`
+  width: 80%;
   margin: 10vh auto 10vh auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 50%;
-  width: 50%; */
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
 
 export const SkillContainer = styled.div`
   margin: 5vh auto 5vh auto;
   width: 80vw;
+  max-width: 350px;
   img {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100px;
     margin: auto;
   }
   p {
     font-family: "Ruluko";
+  }
+  @media (min-width: 900px) {
+    margin: 0 auto;
+    max-width: 200px;
   }
 `;
 
