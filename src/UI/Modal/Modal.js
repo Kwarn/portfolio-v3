@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Backdrop from "../Backdrop/Backdrop";
 import styled from "styled-components";
 import closeIcon from "../../assets/closeIcon.png";
-import rightArrow from "../../assets/rightChevron.png";
 import { useSwipeable } from "react-swipeable";
+import documentIcon from "../../assets/document.png";
 
 const StyledModal = styled.div`
   margin-left: 5%;
@@ -96,7 +96,7 @@ const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
         <StyledThumbnail
           key={`modal-image-${index}`}
           onClick={() => setMainContentIndex(index)}
-          src={typeof content === "object" ? rightArrow : content}
+          src={typeof content === "object" ? documentIcon : content}
           alt={`modal-${index}`}
           isFocus={mainContentIndex === index}
         />
