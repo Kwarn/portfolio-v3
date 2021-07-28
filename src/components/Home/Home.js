@@ -16,6 +16,7 @@ import {
   TriangleIntersectionLeft,
   TriangleIntersectionRight,
   Intersection,
+  WelcomeElementsContainer,
 } from "./HomeStyles";
 
 export default function Home({ scrollIntoView }) {
@@ -35,16 +36,18 @@ export default function Home({ scrollIntoView }) {
           Education
         </MenuOption>
       </MenuOptionsContainer>
-      <HelloText>HELLO</HelloText>
-      <SocialIconsContainer>
-        <SocialIcon src={downloadCVIcon} />
-        <SocialIcon src={githubIcon} />
-        <SocialIcon src={linkedinIcon} />
-      </SocialIconsContainer>
-      <DownArrow
-        onClick={() => scrollIntoView("about")}
-        src={whiteDownArrowIcon}
-      />
+      <WelcomeElementsContainer>
+        <HelloText>HELLO</HelloText>
+        <SocialIconsContainer>
+          <SocialIcon src={downloadCVIcon} />
+          <SocialIcon src={githubIcon} />
+          <SocialIcon src={linkedinIcon} />
+          <DownArrow
+            onClick={() => scrollIntoView("about")}
+            src={whiteDownArrowIcon}
+          />
+        </SocialIconsContainer>
+      </WelcomeElementsContainer>
       <Intersection>
         <TriangleIntersectionLeft />
         <TriangleIntersectionRight />
