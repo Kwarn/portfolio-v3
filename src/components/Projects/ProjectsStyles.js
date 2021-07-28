@@ -28,6 +28,12 @@ export const TextContainer = styled.div`
     font-family: "Ruluko";
     line-height: 25px;
   }
+  @media (min-width: 900px) {
+    max-width: 400px;
+    p {
+      text-align: left;
+    }
+  }
 `;
 
 export const ProjectTile = styled.div`
@@ -53,6 +59,10 @@ export const ProjectTile = styled.div`
   p {
     font-family: "Ruluko";
     margin: 0px 5px 10px 5px;
+  }
+
+  @media (min-width: 900px) {
+    max-width: 40%;
   }
 `;
 
