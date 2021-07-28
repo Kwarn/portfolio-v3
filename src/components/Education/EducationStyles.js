@@ -27,10 +27,10 @@ export const ImagesContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  cursor: pointer;
 `;
 
 export const Image = styled.img`
+  cursor: pointer;
   margin: 2vh auto;
   width: 30%;
   height: auto;
