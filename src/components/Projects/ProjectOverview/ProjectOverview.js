@@ -5,13 +5,11 @@ import {
   ProjectTitle,
   ProjectWrapper,
   Link,
-} from "./ProjectStyles";
+} from "./ProjectOverviewStyles";
 
-export default function Project({
+export default function ProjectOverview({
   title,
   description,
-  previewTechStack,
-  technicalPractices,
   liveDemoLink,
   gitHubLink,
 }) {

@@ -20,7 +20,7 @@ export const projectData = [
       ecommerceImage5,
     ],
     liveDemoLink: "https://e-commerce-d1b62.web.app/home",
-    previewTechStack: "React, Node, Express, GraphQl, Apollo, CSS",
+    previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, CSS",
     gitHubLink: "https://github.com/Kwarn/e-commerce",
     description: `
     My current project and work in progess, built on behalf of a flooring wholesaler.
@@ -36,7 +36,7 @@ export const projectData = [
     title: "Node Projects",
     images: [nodeProjectsImage1, nodeProjectsImage2],
     liveDemoLink: "",
-    previewTechStack: "Node, Graphql, MongoDB, AWS",
+    previewTechStack: "Javascript, Node, Graphql, MongoDB, AWS",
     gitHubLink: "https://github.com/Kwarn/node-the-complete-guide",
     projectLinks: {
       serverSideRendered: {
@@ -78,7 +78,7 @@ export const projectData = [
       Debugging efficiently has been crucial to maintaining positivity, progress and keeping to my deadlines.
       My abilty to predict why and where bugs are likely to occur has dramatically improved through practice. I’ve learned multiple techniques for locating the source of issues and thrive on the process of honing in on the best solutions.`,
     technicalPractices:
-      "IntersectionObserver API for LazyLoading & scroll to navigation, EmailJS API allowing direct messaging from browser to inbox, File-saver libary for direct downloading of CV from react, Carousel with UseSwipable hook to allow swiping between slides, Form validation with invalid form error message handling, Various CSS layout/positioning examples, CSS failsafes to prevent sticky hover effects on mobile, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
+      "IntersectionObserver API for LazyLoading & scroll to navigation, EmailJS API allowing direct messaging from React to inbox, File-saver libary for direct downloading of CV from react, Carousel with UseSwipable hook to allow swiping between slides, Form validation with invalid form error message handling, Various CSS layout/positioning examples, CSS failsafes to prevent sticky hover effects on mobile, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
   },
   {
     title: "Burger Builder",
@@ -100,7 +100,7 @@ export const projectData = [
   {
     title: "Excel Searcher",
     images: [excelSearcherimage1],
-    previewTechStack: "Python, Tkinter",
+    previewTechStack: "Python, Tkinter, SQLite3",
     gitHubLink: "https://github.com/Kwarn/Fizzy-Lookup",
     description: `Desktop App which allows easier searching of excel data.
       Built for the head of lettings for a boutique serviced apartments company, this project allowed me demonstrate and practice a real world use-case for what I had learned with Python.

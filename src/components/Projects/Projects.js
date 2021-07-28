@@ -8,12 +8,25 @@ import {
 } from "./ProjectsStyles";
 import projectsBackground from "../../assets/background5.jpg";
 import { projectData } from "./ProjectData";
-import Project from "./Project/Project";
+import ProjectOverview from "./ProjectOverview/ProjectOverview";
+import ProjectTechnical from "./ProjectTechnical/ProjectTechnical";
 
 export default function Projects({ projectsRef, modalHandler }) {
-  const fullProjectElements = projectData.map((p) => (
-    <Project key={p.title} {...p} />
-  ));
+  const ProjectOverviews = [];
+  const ProjectTechnicals = [];
+
+  projectData.forEach((p) => {
+    ProjectOverviews.push(
+      <ProjectOverview key={`${p.title} overview`} {...p} />
+    );
+    ProjectTechnicals.push(
+      <ProjectTechnical
+        key={`${p.title} technical`}
+        previewTechStack={p.previewTechStack}
+        technicalPractices={p.technicalPractices}
+      />
+    );
+  });
 
   return (
     <ProjectsWrapper>
@@ -33,7 +46,11 @@ export default function Projects({ projectsRef, modalHandler }) {
           onClick={() =>
             modalHandler({
               isVisible: true,
-              contentArray: [[fullProjectElements[i]], ...project.images],
+              contentArray: [
+                [ProjectOverviews[i]],
+                [ProjectTechnicals[i]],
+                ...project.images,
+              ],
             })
           }
         >

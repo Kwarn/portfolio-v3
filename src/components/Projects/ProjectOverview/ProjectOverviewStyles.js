@@ -8,21 +8,23 @@ export const ProjectWrapper = styled.div`
   justify-content: center;
 `;
 
-export const ProjectTitle = styled.h2`
-  width: 50%;
+export const ProjectTitle = styled.h1`
   margin: auto auto 0 auto;
 `;
 
 export const ProjectDescription = styled.p`
   text-align: left;
   line-height: 20px;
-  font-size: 14px;
   margin: 0 auto auto auto;
   width: 80%;
+  @media (min-width: 800px) {
+    width: 70%;
+    line-height: 30px;
+  }
 `;
 
 export const LinksContainer = styled.div`
-  margin: auto;
+  margin: 5vh auto 5vh auto;
   width: 80%;
 `;
 
