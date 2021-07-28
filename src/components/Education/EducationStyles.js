@@ -6,17 +6,40 @@ export const EducationWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: #6e8992;
+  color: white;
+`;
+
+export const EducationHeader = styled.div`
+  background: url(${(props) => props.background});
+  background-position: bottom;
+  background-size: cover;
+  margin: 0 auto auto auto;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 300px;
+  h1 {
+    z-index: 2;
+    margin: auto auto 0 auto;
+  }
 `;
 
 export const TextSectionsContainer = styled.div`
+  background-blend-mode: difference;
+  border-radius: 40px;
   margin: 5vh auto 5vh auto;
-  width: 80%;
-  h1 {
-    margin: 5vh auto;
-  }
+  width: 90%;
   p {
+    text-align: left;
+    margin: auto 5vw;
+    z-index: 2;
     font-family: "Ruluko";
-    line-height: 30px;
+    line-height: 35px;
+  }
+
+  @media (min-width: 700px) {
+    width: 60%;
   }
 `;
 
@@ -30,6 +53,7 @@ export const ImagesContainer = styled.div`
 `;
 
 export const Image = styled.img`
+  opacity: 0.8;
   cursor: pointer;
   margin: 2vh auto;
   width: 30%;
