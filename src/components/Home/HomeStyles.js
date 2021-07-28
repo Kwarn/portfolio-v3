@@ -109,7 +109,7 @@ export const Intersection = styled.div`
 
 export const TriangleIntersectionLeft = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 0;
@@ -120,7 +120,7 @@ export const TriangleIntersectionLeft = styled.div`
 
 export const TriangleIntersectionRight = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   right: 0;
   width: 0;
   height: 0;
