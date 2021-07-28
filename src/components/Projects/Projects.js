@@ -21,7 +21,7 @@ export default function Projects({ projectsRef, modalHandler }) {
       <TextContainer ref={projectsRef}>
         <h1>Projects</h1>
         <p>
-          Build from the ground up with the goal of achieving a strong grasp of
+          Built from the ground up with the goal of achieving a strong grasp of
           how popular design principles and components are implimented, these
           projects demonstrate multiple approaches to building front & back-end
           systems.
