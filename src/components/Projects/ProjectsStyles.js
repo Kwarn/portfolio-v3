@@ -30,7 +30,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const Project = styled.div`
+export const ProjectTile = styled.div`
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.7);
   transition: background-color 0.8s ease;

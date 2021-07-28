@@ -1,13 +1,23 @@
-import imageAssets from "../../assets/assets";
+import ecommerceImage1 from "../../assets/ecommerce1.png";
+import ecommerceImage2 from "../../assets/ecommerce2.png";
+import ecommerceImage3 from "../../assets/ecommerce3.png";
+import ecommerceImage4 from "../../assets/ecommerce4.png";
+import ecommerceImage5 from "../../assets/ecommerce5.png";
+import nodeProjectsImage1 from "../../assets/nodeprojects1.png";
+import nodeProjectsImage2 from "../../assets/nodeprojects2.png";
+import portfolioImage1 from "../../assets/portfolio1.png";
+import burgerBuilderImage1 from "../../assets/burgerbuilder1.png";
+import excelSearcherimage1 from "../../assets/excelsearcher1.png";
+
 export const projectData = [
   {
     title: "E-Commerce",
     images: [
-      imageAssets.ecommerce5,
-      imageAssets.ecommerce2,
-      imageAssets.ecommerce3,
-      imageAssets.ecommerce4,
-      imageAssets.ecommerceCode,
+      ecommerceImage1,
+      ecommerceImage2,
+      ecommerceImage3,
+      ecommerceImage4,
+      ecommerceImage5,
     ],
     liveDemoLink: "https://e-commerce-d1b62.web.app/home",
     previewTechStack: "React, Node, Express, GraphQl, Apollo, CSS",
@@ -24,7 +34,7 @@ export const projectData = [
   },
   {
     title: "Node Projects",
-    images: [imageAssets.serverSideRendered, imageAssets.graphqlProject],
+    images: [nodeProjectsImage1, nodeProjectsImage2],
     liveDemoLink: "",
     previewTechStack: "Node, Graphql, MongoDB, AWS",
     gitHubLink: "https://github.com/Kwarn/node-the-complete-guide",
@@ -56,7 +66,7 @@ export const projectData = [
 
   {
     title: "Portfolios",
-    images: [imageAssets.portfolio],
+    images: [portfolioImage1],
     previewTechStack: "Javascript, React, Firebase, CSS",
     liveDemoLink: "https://portfolio-v1-9290a.web.app/",
     gitHubLink: "https://github.com/Kwarn/portfolio-v1",
@@ -72,7 +82,7 @@ export const projectData = [
   },
   {
     title: "Burger Builder",
-    images: [imageAssets.burgerBuilder],
+    images: [burgerBuilderImage1],
     liveDemoLink: "https://react-burger-builder-679aa.web.app/",
     previewTechStack: "Javascript, React, Redux, Redux-Saga, Firebase, CSS",
     gitHubLink: "https://github.com/Kwarn/burger-builder",
@@ -89,7 +99,7 @@ export const projectData = [
   },
   {
     title: "Excel Searcher",
-    images: [imageAssets.fizzyLookup],
+    images: [excelSearcherimage1],
     previewTechStack: "Python, Tkinter",
     gitHubLink: "https://github.com/Kwarn/Fizzy-Lookup",
     description: `Desktop App which allows easier searching of excel data.

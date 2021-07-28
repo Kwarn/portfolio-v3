@@ -18,15 +18,22 @@ import {
   Intersection,
 } from "./HomeStyles";
 
-export default function Home() {
+export default function Home({ scrollIntoView }) {
   return (
     <HomeWrapper>
       <Background src={background} alt="home-background" />
       <MenuOptionsContainer>
-        <MenuOption>About</MenuOption>
-        <MenuOption>Skills</MenuOption>
-        <MenuOption>Projects</MenuOption>
-        <MenuOption>Designs</MenuOption>
+        <MenuOption onClick={() => scrollIntoView("about")}>About</MenuOption>
+        <MenuOption onClick={() => scrollIntoView("skills")}>Skills</MenuOption>
+        <MenuOption onClick={() => scrollIntoView("projects")}>
+          Projects
+        </MenuOption>
+        <MenuOption onClick={() => scrollIntoView("designs")}>
+          Designs
+        </MenuOption>
+        <MenuOption onClick={() => scrollIntoView("education")}>
+          Education
+        </MenuOption>
       </MenuOptionsContainer>
       <HelloText>HELLO</HelloText>
       <SocialIconsContainer>
@@ -34,7 +41,10 @@ export default function Home() {
         <SocialIcon src={githubIcon} />
         <SocialIcon src={linkedinIcon} />
       </SocialIconsContainer>
-      <DownArrow src={whiteDownArrowIcon} />
+      <DownArrow
+        onClick={() => scrollIntoView("about")}
+        src={whiteDownArrowIcon}
+      />
       <Intersection>
         <TriangleIntersectionLeft />
         <TriangleIntersectionRight />

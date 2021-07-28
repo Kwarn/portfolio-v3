@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SkillsWrapper = styled.div`
-  height: 125vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -11,7 +10,7 @@ export const SkillsWrapper = styled.div`
 `;
 
 export const SkillsContainer = styled.div`
-  margin: auto;
+  margin: 10vh auto 10vh auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,29 +32,18 @@ export const SkillContainer = styled.div`
 `;
 
 export const Intersection = styled.div`
+  overflow: hidden;
+  /* position: absolute; */
+  margin: auto auto -50px auto;
   z-index: 1;
   width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
-export const TriangleIntersectionLeft = styled.div`
-  position: absolute;
-  bottom: -10vh;
-  left: 0;
-  width: 0;
-  height: 0;
-  /* border-top: 10vh solid transparent; */
-  border-bottom: 10vh solid transparent;
-  border-right: 48vw solid #dedede;
-`;
-
-export const TriangleIntersectionRight = styled.div`
-  position: absolute;
-  bottom: -10vh;
-  right: 0;
-  width: 0;
-  height: 0;
-  /* border-top: 20vw solid transparent; */
-  border-bottom: 10vh solid transparent;
-  border-left: 48vw solid #dedede;
+export const TriangleIntersection = styled.div`
+  /* height: 50px; */
+  border-left: 49vw solid transparent;
+  border-right: 49vw solid transparent;
+  border-top: 50px solid #dedede;
 `;

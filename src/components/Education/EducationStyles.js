@@ -9,7 +9,7 @@ export const EducationWrapper = styled.div`
 `;
 
 export const TextSectionsContainer = styled.div`
-  margin: 10vh auto;
+  margin: 5vh auto 5vh auto;
   width: 80%;
   h1 {
     margin: 5vh auto;
@@ -21,15 +21,17 @@ export const TextSectionsContainer = styled.div`
 `;
 
 export const ImagesContainer = styled.div`
-  width: 100%;
+  margin: auto;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`
   margin: 2vh auto;
-  width: 80%;
+  width: 30%;
   height: auto;
 `;

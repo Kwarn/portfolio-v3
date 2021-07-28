@@ -3,27 +3,24 @@ import { SkillContainer, SkillsContainer, SkillsWrapper } from "./SkillsStyles";
 import frontend from "../../assets/frontend.png";
 import backend from "../../assets/backend.png";
 import uxui from "../../assets/uxui.png";
-import {
-  Intersection,
-  TriangleIntersectionLeft,
-  TriangleIntersectionRight,
-} from "./SkillsStyles";
+import { Intersection, TriangleIntersection } from "./SkillsStyles";
 
-export default function Skills() {
+export default function Skills({ skillsRef }) {
   return (
     <SkillsWrapper>
       <SkillsContainer>
-        <SkillContainer>
+        <SkillContainer ref={skillsRef}>
           <img src={frontend} alt="front-end" />
           <h3>Front-end</h3>
           <p>
-            JavaScript ES6+, TypeScript, React, Redux, ApolloClient, HTML, CSS.
+            JavaScript ES6+, TypeScript, React, Redux, ApolloClient, HTML,
+            CSS/styled-components.
           </p>
         </SkillContainer>
         <SkillContainer>
           <img src={backend} alt="back-end" />
           <h3>Back-end</h3>
-          <p>Node, Express, GraphQL, SQL, Apollo, MongoDb</p>
+          <p>Node, Express, GraphQL, SQL, Apollo, MongoDb, Python, Django.</p>
         </SkillContainer>
         <SkillContainer>
           <img src={uxui} alt="uxui" />
@@ -32,8 +29,7 @@ export default function Skills() {
         </SkillContainer>
       </SkillsContainer>
       <Intersection>
-        <TriangleIntersectionLeft />
-        <TriangleIntersectionRight />
+        <TriangleIntersection />
       </Intersection>
     </SkillsWrapper>
   );

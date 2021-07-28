@@ -18,8 +18,8 @@ export const Background = styled.img`
 
 export const SocialIconsContainer = styled.div`
   /* background-color: white; */
-  background-color: rgba(255, 255, 255, 0.5);
-  /* mix-blend-mode: difference; */
+  background-color: white;
+  mix-blend-mode: difference;
   z-index: 1;
   margin: -7vh auto auto auto;
   width: 70%;
@@ -51,15 +51,17 @@ export const HelloText = styled.h1`
   mix-blend-mode: difference;
   color: #eee;
   font-size: 40vw;
-  margin: 30vh auto 5px auto;
+  margin: 20vh auto 5px auto;
   z-index: 1;
 `;
 
 export const MenuOptionsContainer = styled.div`
+  margin: 2vh auto 0 auto;
+  z-index: 2;
   font-family: "Teko";
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
+  /* position: absolute; */
+  /* top: 2vh;
+  right: 2vw; */
   width: 100%;
   height: 40px;
   display: flex;
@@ -68,7 +70,7 @@ export const MenuOptionsContainer = styled.div`
 
 export const MenuOption = styled.p`
   cursor: pointer;
-  font-size: 6vw;
+  font-size: 5vw;
   color: #eee;
   width: fit-content;
   margin: auto;

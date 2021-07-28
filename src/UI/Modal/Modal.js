@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Backdrop from '../Backdrop/Backdrop';
-import styled from 'styled-components';
-import imageAssets from '../../../assets/assets';
-
-import { useSwipeable } from 'react-swipeable';
+import React, { useState } from "react";
+import Backdrop from "../Backdrop/Backdrop";
+import styled from "styled-components";
+import closeIcon from "../../assets/closeIcon.png";
+import rightArrow from "../../assets/rightChevron.png";
+import { useSwipeable } from "react-swipeable";
 
 const StyledModal = styled.div`
   margin-left: 5%;
-  transform: ${props =>
-    props.isShown ? 'translateY(0)' : 'translateY(-100vh)'};
-  opacity: ${props => (props.isShown ? '1' : '0')};
+  transform: ${(props) =>
+    props.isShown ? "translateY(0)" : "translateY(-100vh)"};
+  opacity: ${(props) => (props.isShown ? "1" : "0")};
   z-index: 500;
   position: fixed;
   background-color: #fff;
@@ -20,9 +20,6 @@ const StyledModal = styled.div`
   padding: 1px;
   box-sizing: border-box;
   transition: all 0.3s ease-in;
-  @media (max-width: 700px) {
-    width: 85%;
-  }
 `;
 
 const StyledCloseIcon = styled.img`
@@ -33,6 +30,10 @@ const StyledCloseIcon = styled.img`
   height: 30px;
   width: 30px;
   cursor: pointer;
+  @media (max-width: 700px) {
+    top: 5px;
+    right: 5px;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -44,7 +45,7 @@ const StyledContent = styled.div`
   height: 100%;
 `;
 
-const StyledMainImageWrapper = styled.div`
+const StyledMainContentWrapper = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
@@ -68,63 +69,54 @@ const StyledThumbnailWrapper = styled.div`
 `;
 
 const StyledThumbnail = styled.img`
-  border: ${props => (props.isFocus ? '2px solid green' : 'none')};
+  border: ${(props) => (props.isFocus ? "2px solid green" : "none")};
   width: 60px;
   height: 60px;
   margin: 5px;
   cursor: pointer;
 `;
 
-const StyledSwipeIcon = styled.img`
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 35px);
-  width: 70px;
-  height: 70px;
-`;
-
-const Modal = ({ isVisible, closeFn, children }) => {
-  const [mainImageIndex, setMainImageIndex] = useState(0);
-  let images = [];
+const Modal = ({ isVisible, closeFn, contentArray = [] }) => {
+  const [mainContentIndex, setMainContentIndex] = useState(0);
   let thumbnails = [];
-  const isMultipleImages = children
-    ? Object.keys(children).length > 1
-      ? true
-      : false
-    : false;
+  const isMultipleContent = contentArray.length > 1;
+  const isContentImage = typeof contentArray[mainContentIndex] === "string";
 
   // probably shouldn't do this, feels hacky.
   if (isVisible) {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   }
-  if (children) {
-    images = Array.from(children);
-    thumbnails = images.map((image, idx) => (
-      <StyledThumbnail
-        onClick={() => setMainImageIndex(idx)}
-        key={`modal-image-${idx}`}
-        src={image}
-        alt={`modal-${idx}`}
-        isFocus={mainImageIndex === idx}
-      />
-    ));
+
+  if (contentArray.length > 0) {
+    contentArray.forEach((content) => {
+      const index = thumbnails.length;
+      thumbnails.push(
+        <StyledThumbnail
+          key={`modal-image-${index}`}
+          onClick={() => setMainContentIndex(index)}
+          src={typeof content === "object" ? rightArrow : content}
+          alt={`modal-${index}`}
+          isFocus={mainContentIndex === index}
+        />
+      );
+    });
   }
 
   const goRight = () => {
-    if (mainImageIndex === images.length - 1) {
-      setMainImageIndex(0);
+    if (mainContentIndex === contentArray.length - 1) {
+      setMainContentIndex(0);
     } else {
-      setMainImageIndex(mainImageIndex + 1);
+      setMainContentIndex(mainContentIndex + 1);
     }
   };
 
   const goLeft = () => {
-    if (mainImageIndex === 0) {
-      setMainImageIndex(images.length - 1);
+    if (mainContentIndex === 0) {
+      setMainContentIndex(contentArray.length - 1);
     } else {
-      setMainImageIndex(mainImageIndex - 1);
+      setMainContentIndex(mainContentIndex - 1);
     }
   };
 
@@ -136,7 +128,7 @@ const Modal = ({ isVisible, closeFn, children }) => {
   });
 
   const imageResetHelperFn = () => {
-    setMainImageIndex(0);
+    setMainContentIndex(0);
   };
 
   return (
@@ -152,19 +144,18 @@ const Modal = ({ isVisible, closeFn, children }) => {
             imageResetHelperFn();
             closeFn();
           }}
-          src={imageAssets.closeIcon}
+          src={closeIcon}
           alt="close modal"
         />
         <StyledContent>
-          <StyledMainImageWrapper>
-            <StyledMainImage background={images[mainImageIndex]} />
-            {isMultipleImages ? (
-              <StyledSwipeIcon src={imageAssets.swipeIcon} alt="Swipe" />
+          <StyledMainContentWrapper>
+            {isContentImage ? (
+              <StyledMainImage background={contentArray[mainContentIndex]} />
             ) : (
-              ''
+              contentArray[mainContentIndex]
             )}
-          </StyledMainImageWrapper>
-          {isMultipleImages ? (
+          </StyledMainContentWrapper>
+          {isMultipleContent ? (
             thumbnails ? (
               <StyledThumbnailWrapper>{thumbnails}</StyledThumbnailWrapper>
             ) : null

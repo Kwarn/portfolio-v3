@@ -2,19 +2,23 @@ import React from "react";
 import {
   ProjectsWrapper,
   Background,
-  Project,
+  ProjectTile,
   TextContainer,
-  ProjectSmall,
   ProjectsFooter,
 } from "./ProjectsStyles";
 import projectsBackground from "../../assets/background5.jpg";
 import { projectData } from "./ProjectData";
+import Project from "./Project/Project";
 
-export default function Projects() {
+export default function Projects({ projectsRef, modalHandler }) {
+  const fullProjectElements = projectData.map((p) => (
+    <Project key={p.title} {...p} />
+  ));
+
   return (
     <ProjectsWrapper>
       <Background src={projectsBackground} alt="projects-background" />
-      <TextContainer>
+      <TextContainer ref={projectsRef}>
         <h1>Projects</h1>
         <p>
           Build from the ground up with the goal of achieving a strong grasp of
@@ -24,14 +28,26 @@ export default function Projects() {
         </p>
       </TextContainer>
       {projectData.map((project, i) => (
-        <Project>
+        <ProjectTile
+          key={`${project.title} tile`}
+          onClick={() =>
+            modalHandler({
+              isVisible: true,
+              contentArray: [[fullProjectElements[i]], ...project.images],
+            })
+          }
+        >
           <h2>{project.title}</h2>
           <p>{project.previewTechStack}</p>
-        </Project>
+        </ProjectTile>
       ))}
       <ProjectsFooter>
         A full list of my projects can be found{" "}
-        <a href="https://github.com/Kwarn?tab=repositories" target="_blank">
+        <a
+          href="https://github.com/Kwarn?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Here
         </a>
         .
