@@ -1,5 +1,10 @@
 import React from "react";
-import { DesignsWrapper, Image, TextSectionsContainer } from "./DesignsStyles";
+import {
+  DesignsWrapper,
+  Image,
+  ImageContainer,
+  TextSectionsContainer,
+} from "./DesignsStyles";
 import slopesImage from "../../assets/slopes.png";
 import gardeningImage from "../../assets/gardening.png";
 import gymImage from "../../assets/gym.png";
@@ -17,11 +22,12 @@ export default function Designs({ designsRef }) {
           examples.
         </p>
       </TextSectionsContainer>
-
-      <Image src={slopesImage} />
-      <Image src={climbingImage} />
-      <Image src={gymImage} />
-      <Image src={gardeningImage} />
+      <ImageContainer>
+        <Image src={slopesImage} alt="ski resort website design" />
+        <Image src={climbingImage} alt="climbing website design" />
+        <Image src={gymImage} alt="personal trainer website design" />
+        <Image src={gardeningImage} alt="gardener website design" />
+      </ImageContainer>
     </DesignsWrapper>
   );
 }

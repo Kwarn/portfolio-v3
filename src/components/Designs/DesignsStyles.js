@@ -10,19 +10,23 @@ export const DesignsWrapper = styled.div`
   overflow: hidden;
   padding-bottom: 15vh;
 `;
+
 export const TextSectionsContainer = styled.div`
   max-width: 100%;
   z-index: 2;
-  position: relative;
   color: white;
-  text-align: left;
   width: 80%;
   margin: 15vh auto 10vh auto;
   font-family: "Ruluko";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   h2 {
+    text-align: left;
     font-size: 5vw;
   }
   p {
+    text-align: left;
     font-weight: 300;
     line-height: 30px;
   }
@@ -35,6 +39,23 @@ export const TextSectionsContainer = styled.div`
       max-width: 500px;
     }
   }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
 `;
 
 export const Image = styled.img`
@@ -45,5 +66,11 @@ export const Image = styled.img`
 
   @media (min-width: 900px) {
     width: 60%;
+  }
+  @media (min-width: 1200px) {
+    margin: auto;
+    width: 45vw;
+    height: auto;
+    padding: 5vh 0;
   }
 `;
