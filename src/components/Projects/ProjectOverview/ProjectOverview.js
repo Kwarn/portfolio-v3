@@ -13,20 +13,33 @@ export default function ProjectOverview({
   liveDemoLink,
   gitHubLink,
 }) {
+  const createLinks = (linkData, linkText) => {
+    let links = [];
+    if (typeof linkData === "object") {
+      Object.keys(linkData).forEach((key) => {
+        links.push(
+          <Link href={linkData[key]} target="_blank" rel="noopener noreferrer">
+            {key} {linkText}
+          </Link>
+        );
+      });
+    }
+    if (typeof linkData === "string") {
+      links.push(
+        <Link href={linkData} target="_blank" rel="noopener noreferrer">
+          {linkText}
+        </Link>
+      );
+    }
+    return links;
+  };
+
   return (
     <ProjectWrapper>
       <ProjectTitle>{title}</ProjectTitle>
       <LinksContainer>
-        {liveDemoLink ? (
-          <Link href={liveDemoLink} target="_blank" rel="noopener noreferrer">
-            Live-Demo
-          </Link>
-        ) : null}
-        {gitHubLink ? (
-          <Link href={gitHubLink} target="_blank" rel="noopener noreferrer">
-            GitHub-Repo
-          </Link>
-        ) : null}
+        {liveDemoLink ? createLinks(liveDemoLink, "Live-demo") : null}
+        {gitHubLink ? createLinks(gitHubLink, "Git-repo") : null}
       </LinksContainer>
       <ProjectDescription>{description}</ProjectDescription>
     </ProjectWrapper>

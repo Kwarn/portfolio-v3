@@ -37,20 +37,13 @@ export const projectData = [
     images: [nodeProjectsImage1, nodeProjectsImage2],
     liveDemoLink: "",
     previewTechStack: "Javascript, Node, Graphql, MongoDB, AWS",
-    gitHubLink: "https://github.com/Kwarn/node-the-complete-guide",
-    projectLinks: {
-      serverSideRendered: {
-        link: "https://github.com/Kwarn/node-the-complete-guide",
-        description: "E-Commerce - ExpressJs server-side rendering",
-      },
-      graphQl: {
-        link: "https://github.com/Kwarn/blog-REST-API/",
-        description: "Blog - GraphQl API",
-      },
-      frontend: {
-        link: "https://github.com/Kwarn/blog-frontend",
-        description: "Blog - Front-End",
-      },
+    gitHubLink: {
+      "Server-side rendered":
+        "https://github.com/Kwarn/node-the-complete-guide",
+
+      "GraphQl-blog": "https://github.com/Kwarn/blog-REST-API/",
+
+      "React-blog": "https://github.com/Kwarn/blog-frontend",
     },
     description: `
     Built from the ground up, the goal of these projects was to provide me with a greater knowledge base from which to decide how to proceed with my current project's back-end.
@@ -68,8 +61,14 @@ export const projectData = [
     title: "Portfolios",
     images: [portfolioImage1],
     previewTechStack: "Javascript, React, Firebase, CSS",
-    liveDemoLink: "https://portfolio-v1-9290a.web.app/",
-    gitHubLink: "https://github.com/Kwarn/portfolio-v1",
+    liveDemoLink: {
+      v1: "https://portfolio-v1-9290a.web.app/",
+      v2: "https://portfolio-v2-631c4.web.app",
+    },
+    gitHubLink: {
+      v1: "https://github.com/Kwarn/portfolio-v1",
+      v2: "https://github.com/Kwarn/portfolio",
+    },
     description: `
       This is my original portfolio which this site is a decendant of.
       Both portfolios have been invaluable resources, allowing me to practise a variety of design approaches, receive feedback and consider different perspectives.
