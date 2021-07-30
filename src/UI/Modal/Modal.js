@@ -68,7 +68,6 @@ const StyledMainImage = styled.div`
   background-position: center;
   height: 100%;
   width: auto;
-  /* border: 3px solid #474747 */
 `;
 
 const StyledThumbnailWrapper = styled.div`
@@ -80,6 +79,7 @@ const StyledThumbnailWrapper = styled.div`
 
 const StyledThumbnail = styled.img`
   border: ${(props) => (props.isFocus ? "2px solid green" : "none")};
+  object-fit: cover;
   width: 30px;
   height: 30px;
   margin: 5px;
