@@ -18,8 +18,8 @@ export default function Designs({ designsRef }) {
         <p>
           Having discovered the power of Figma.com, I've been further improving
           my design skills by experimenting with the core principles of visual
-          hierarchy, spacing & font choice. Below are some of my recent
-          examples.
+          hierarchy, proportions, white space, colour palettes & font choice.
+          Below are some of my recent examples.
         </p>
       </TextSectionsContainer>
       <ImageContainer>

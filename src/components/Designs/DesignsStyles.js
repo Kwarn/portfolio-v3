@@ -6,7 +6,7 @@ export const DesignsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #474747;
+  background-color: #ffffdb;
   overflow: hidden;
   padding-bottom: 15vh;
 `;
@@ -14,7 +14,7 @@ export const DesignsWrapper = styled.div`
 export const TextSectionsContainer = styled.div`
   max-width: 100%;
   z-index: 2;
-  color: white;
+  color: #474747;
   width: 80%;
   margin: 15vh auto 10vh auto;
   font-family: "Ruluko";
@@ -44,7 +44,7 @@ export const TextSectionsContainer = styled.div`
       font-size: 50px;
     }
     p {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 `;
@@ -59,6 +59,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
+  border: 1px solid #474747;
   margin: 3vh auto;
   width: 95%;
   height: auto;
@@ -71,6 +72,5 @@ export const Image = styled.img`
     margin: auto;
     width: 45vw;
     height: auto;
-    padding: 5vh 0;
   }
 `;
