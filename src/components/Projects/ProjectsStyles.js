@@ -23,6 +23,7 @@ export const TextContainer = styled.div`
   margin: 20vh auto 5vh auto;
   width: 80%;
   h1 {
+    text-align: center;
   }
   p {
     font-family: "Ruluko";
@@ -47,11 +48,10 @@ export const TextContainer = styled.div`
 `;
 
 export const ProjectTile = styled.div`
+  text-align: center;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.7);
   transition: background-color 0.8s ease;
-  box-shadow: 0px 1px 2px 2px #eee;
-
   &:hover {
     background-color: cyan;
     background-position: right;
@@ -86,6 +86,7 @@ export const ProjectTile = styled.div`
 `;
 
 export const ProjectsFooter = styled.p`
+  text-align: center;
   color: #eee;
   margin: 5vh auto 15vh auto;
   width: 80%;

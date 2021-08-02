@@ -20,9 +20,11 @@ export const ProjectDescription = styled.p`
   line-height: 20px;
   margin: 0 auto auto auto;
   width: 80%;
+  font-size: 12px;
   @media (min-width: 800px) {
     width: 70%;
     line-height: 30px;
+    font-size: 16px;
   }
   @media (min-width: 1200px) {
     width: 50%;
@@ -34,6 +36,13 @@ export const ProjectDescription = styled.p`
 export const LinksContainer = styled.div`
   margin: 5vh auto 5vh auto;
   width: 80%;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: row;
+    flex-wrap: wrap;
+    margin: 1vh auto 2vh auto;
+  }
 `;
 
 export const Link = styled.a`

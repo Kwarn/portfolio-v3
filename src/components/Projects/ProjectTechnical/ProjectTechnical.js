@@ -40,10 +40,11 @@ export default function ProjectTechnical({
     sqlite3: sqlite3,
   };
 
-  const techIcons = previewTechStack.split(", ").map((tech) => {
+  let techIcons = [];
+  previewTechStack.split(", ").forEach((tech) => {
     const key = tech.toLowerCase();
     if (techs[key]) {
-      return <TechIcon key={tech} src={techs[key]} />;
+      techIcons.push(<TechIcon key={tech} src={techs[key]} />);
     }
   });
 

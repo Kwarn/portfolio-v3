@@ -5,6 +5,11 @@ import ecommerceImage4 from "../../assets/ecommerce4.png";
 import ecommerceImage5 from "../../assets/ecommerce5.png";
 import nodeProjectsImage1 from "../../assets/nodeprojects1.png";
 import nodeProjectsImage2 from "../../assets/nodeprojects2.png";
+import portfolioV2Image1 from "../../assets/portfoliov2image1.png";
+import portfolioV2Image2 from "../../assets/portfoliov2image2.png";
+import portfolioV2Image3 from "../../assets/portfoliov2image3.png";
+import portfolioV2Image4 from "../../assets/portfoliov2image4.png";
+import portfolioV2Image5 from "../../assets/portfoliov2image5.png";
 import portfolioImage1 from "../../assets/portfolio1.png";
 import burgerBuilderImage1 from "../../assets/burgerbuilder1.png";
 import excelSearcherimage1 from "../../assets/excelsearcher1.png";
@@ -20,11 +25,11 @@ export const projectData = [
       ecommerceImage5,
     ],
     liveDemoLink: "https://e-commerce-d1b62.web.app/home",
-    previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, CSS",
+    previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, AWS",
     gitHubLink: "https://github.com/Kwarn/e-commerce",
     description: `
     My current project and work in progess, built on behalf of a flooring wholesaler.
-    The current goal is to provide the client with a site they can login to as administrator and display/manage their products on, with the eventual goal of providing them the functionality to gain access to the retail market and sell directly to end-users.
+    The current goal is to provide the client with a site they can login to as administrator and display/manage their products on, with the eventual goal of providing them the functionality to gain access to the retail market.
     The current work on the site is focused around fleshing out administrator functionality to allow all CRUD operations via the back-end.
     `,
     lessons: "",
@@ -47,7 +52,6 @@ export const projectData = [
     },
     description: `
     Built from the ground up, the goal of these projects was to provide me with a greater knowledge base from which to decide how to proceed with my current project's back-end.
-    Projects include a REST Express server-side rendered e-commerce site and a GraphQl blog API with React front-end.
     The most valuable experience I gained from these projects was converting within the projects between multiple approaches, this gave me a solid understanding of the core principles and the varying ways of achieving them.
     `,
     lessons: `How API's work. Detailed understanding of common practices & design patterns.`,
@@ -59,7 +63,14 @@ export const projectData = [
 
   {
     title: "Portfolios",
-    images: [portfolioImage1],
+    images: [
+      portfolioV2Image1,
+      portfolioV2Image2,
+      portfolioV2Image3,
+      portfolioV2Image4,
+      portfolioV2Image5,
+      portfolioImage1,
+    ],
     previewTechStack: "Javascript, React, Firebase, CSS",
     liveDemoLink: {
       v1: "https://portfolio-v1-9290a.web.app/",
@@ -70,14 +81,17 @@ export const projectData = [
       v2: "https://github.com/Kwarn/portfolio",
     },
     description: `
-      This is my original portfolio which this site is a decendant of.
-      Both portfolios have been invaluable resources, allowing me to practise a variety of design approaches, receive feedback and consider different perspectives.
-      Throughout the project I’ve challenged myself to implement components & features from the ground up, with the goal of achieving a strong grasp of how popular components work.`,
+      The portfolio has seen multiple renditions allowing me to practice various approaches to design and functionality.
+       As I have improved over the years I've updated my portfolio to serve as a live example of my progress.
+        I found the v2 portfolio to have issues with responsiveness (mostly resolved now) due to experimenting with a desktop-first approach as apposed to the more conventional mobile-first approach.
+         The functionality of the v2 portfolio is arguably more technically impressive than the portfolio you're currently viewing,
+          however ultimately I felt the complexity of the design was detrimental to the UX and was built prior to a lot of design experimentation within figma.com
+      `,
     lessons: `Effective debugging, finding and adapting solutions to my specific case. 
       Debugging efficiently has been crucial to maintaining positivity, progress and keeping to my deadlines.
       My abilty to predict why and where bugs are likely to occur has dramatically improved through practice. I’ve learned multiple techniques for locating the source of issues and thrive on the process of honing in on the best solutions.`,
     technicalPractices:
-      "IntersectionObserver API for LazyLoading & scroll to navigation, EmailJS API allowing direct messaging from React to inbox, File-saver libary for direct downloading of CV from react, Carousel with UseSwipable hook to allow swiping between slides, Form validation with invalid form error message handling, Various CSS layout/positioning examples, CSS failsafes to prevent sticky hover effects on mobile, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
+      "IntersectionObserver API for LazyLoading & scroll-to navigation, Function throttling to prevent scrolling through menu too quickly, EmailJS API allowing direct messaging from React to inbox, File-saver libary for direct downloading of CV from react, Form validation, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
   },
   {
     title: "Burger Builder",

@@ -18,7 +18,12 @@ export default function ProjectOverview({
     if (typeof linkData === "object") {
       Object.keys(linkData).forEach((key) => {
         links.push(
-          <Link href={linkData[key]} target="_blank" rel="noopener noreferrer">
+          <Link
+            key={key}
+            href={linkData[key]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {key} {linkText}
           </Link>
         );
@@ -26,7 +31,12 @@ export default function ProjectOverview({
     }
     if (typeof linkData === "string") {
       links.push(
-        <Link href={linkData} target="_blank" rel="noopener noreferrer">
+        <Link
+          key={linkData}
+          href={linkData}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {linkText}
         </Link>
       );

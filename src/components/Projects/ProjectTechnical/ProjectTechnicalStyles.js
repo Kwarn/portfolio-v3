@@ -42,8 +42,10 @@ export const TechText = styled.p`
   margin: 5vh auto auto auto;
   width: 80%;
   line-height: 22px;
+  font-size: 12px;
   @media (min-width: 800px) {
     line-height: 30px;
+    font-size: 16px;
   }
   @media (min-width: 1200px) {
     width: 50%;
