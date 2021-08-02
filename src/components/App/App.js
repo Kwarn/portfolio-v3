@@ -3,11 +3,12 @@ import About from "../About/About";
 import Home from "../Home/Home";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
-import "./App.css";
 import WebFont from "webfontloader";
 import Designs from "../Designs/Designs";
 import Education from "../Education/Education";
 import Modal from "../../UI/Modal/Modal";
+import ExtraInfo from "../CodeChallenges/ExtraInfo";
+import GoToTop from "../../UI/GoToTop/GoToTop";
 
 function App() {
   const [modalControl, setModalControl] = useState({
@@ -19,7 +20,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Ruluko", "Teko"],
+        families: ["Ruluko", "Teko", "Secular One"],
       },
     });
   }, []);
@@ -41,6 +42,7 @@ function App() {
   };
 
   const elementRefs = {
+    home: useRef(null),
     about: useRef(null),
     skills: useRef(null),
     projects: useRef(null),
@@ -58,9 +60,12 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <Modal closeFn={closeModalHandler} {...modalControl} />
-      <Home scrollIntoView={(refName) => scrollIntoView(refName)} />
+      <Home
+        homeRef={elementRefs.home}
+        scrollIntoView={(refName) => scrollIntoView(refName)}
+      />
       <About aboutRef={elementRefs.about} />
       <Skills skillsRef={elementRefs.skills} />
       <Projects
@@ -72,6 +77,8 @@ function App() {
         educationRef={elementRefs.education}
         modalHandler={(options) => modalHandler(options)}
       />
+      <ExtraInfo modalHandler={(options) => modalHandler(options)} />
+      <GoToTop scrollIntoView={(refName) => scrollIntoView(refName)} />
     </div>
   );
 }
