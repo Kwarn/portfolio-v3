@@ -4,7 +4,6 @@ import {
   TextSectionsContainer,
   ImagesContainer,
   Image,
-  GradientBackground,
   EducationHeader,
 } from "./EducationStyles";
 import educationBackground from "../../assets/studyingBackground2.jpg";

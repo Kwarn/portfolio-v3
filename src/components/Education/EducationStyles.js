@@ -24,9 +24,9 @@ export const EducationHeader = styled.div`
     margin: auto auto 0 auto;
   }
   @media (min-width: 1200px) {
+    height: 500px;
     background-position: center;
     h1 {
-      margin: auto;
       font-size: 60px;
     }
   }
