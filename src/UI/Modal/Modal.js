@@ -172,7 +172,11 @@ const Modal = ({ isVisible, closeFn, contentArray = [], startingIndex }) => {
         />
         <StyledContent>
           <StyledMainContentWrapper>
-            <StyledSwipeIcon src={swipeIcon} alt="swiping enabled" />
+            {isMultipleContent ? (
+              <StyledSwipeIcon src={swipeIcon} alt="swiping enabled" />
+            ) : (
+              ""
+            )}
             {isContentImage ? (
               <StyledMainImage background={contentArray[mainContentIndex]} />
             ) : (
