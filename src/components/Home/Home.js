@@ -1,5 +1,6 @@
 import React from "react";
-import background from "../../assets/homeBackground1.jpg";
+// import background from "../../assets/homeBackground1.jpg";
+import background from "../../assets/homeBackground.jpg";
 import githubIcon from "../../assets/github.jpeg";
 import linkedinIcon from "../../assets/linkedin.png";
 import downloadCVIcon from "../../assets/cvicon.jpeg";
@@ -20,7 +21,7 @@ import {
   WelcomeElementsContainer,
 } from "./HomeStyles";
 
-export default function Home({ scrollIntoView }) {
+export default function Home({ homeRef, scrollIntoView }) {
   const saveFile = () =>
     FileSaver.saveAs(
       process.env.PUBLIC_URL + "/resource/Karl_Warner_CV.pdf",
@@ -29,7 +30,7 @@ export default function Home({ scrollIntoView }) {
   return (
     <HomeWrapper>
       <Background src={background} alt="home-background" />
-      <MenuOptionsContainer>
+      <MenuOptionsContainer ref={homeRef}>
         <MenuOption onClick={() => scrollIntoView("about")}>About</MenuOption>
         <MenuOption onClick={() => scrollIntoView("skills")}>Skills</MenuOption>
         <MenuOption onClick={() => scrollIntoView("projects")}>
@@ -43,19 +44,16 @@ export default function Home({ scrollIntoView }) {
         </MenuOption>
       </MenuOptionsContainer>
       <WelcomeElementsContainer>
-        <HelloText>HELLO</HelloText>
-        <DownArrow
-          onClick={() => scrollIntoView("about")}
-          src={whiteDownArrowIcon}
-          alt="scroll down arrow"
-        />
+        <HelloText>
+          HELLO
+          <DownArrow
+            onClick={() => scrollIntoView("about")}
+            src={whiteDownArrowIcon}
+            alt="scroll down arrow"
+          />
+        </HelloText>
       </WelcomeElementsContainer>
       <SocialIconsContainer>
-        <SocialIcon
-          src={downloadCVIcon}
-          alt="download cv link"
-          onClick={saveFile}
-        />
         <a
           href="https://github.com/Kwarn"
           target="_blank"
@@ -70,6 +68,11 @@ export default function Home({ scrollIntoView }) {
         >
           <SocialIcon src={linkedinIcon} alt="linked in profile link" />
         </a>
+        <SocialIcon
+          src={downloadCVIcon}
+          alt="download cv link"
+          onClick={saveFile}
+        />
       </SocialIconsContainer>
       <Intersection>
         <TriangleIntersectionLeft />
