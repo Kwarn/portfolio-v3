@@ -6,7 +6,8 @@ export const SkillsWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  background-color: #dedede;
+  background-color: #ffffdb;
+  text-align: center;
 `;
 
 export const SkillsContainer = styled.div`
@@ -18,6 +19,7 @@ export const SkillsContainer = styled.div`
   @media (min-width: 900px) {
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 20vh auto 10vh auto;
   }
   @media (min-width: 1200px) {
     max-width: 1200px;
@@ -52,18 +54,23 @@ export const SkillContainer = styled.div`
 `;
 
 export const Intersection = styled.div`
-  overflow: hidden;
-  /* position: absolute; */
-  margin: auto auto -50px auto;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  display: hidden;
+  @media (min-width: 900px) {
+    display: inline;
+    overflow: hidden;
+    margin: auto auto -80px auto;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const TriangleIntersection = styled.div`
-  /* height: 50px; */
-  border-left: 49vw solid transparent;
-  border-right: 49vw solid transparent;
-  border-top: 50px solid #dedede;
+  display: hidden;
+  @media (min-width: 900px) {
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 80px solid black;
+  }
 `;

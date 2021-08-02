@@ -1,13 +1,21 @@
 import React from "react";
-import { SkillContainer, SkillsContainer, SkillsWrapper } from "./SkillsStyles";
+import {
+  SkillContainer,
+  SkillsContainer,
+  SkillsWrapper,
+  Intersection,
+  TriangleIntersection,
+} from "./SkillsStyles";
 import frontend from "../../assets/frontend.png";
 import backend from "../../assets/backend.png";
 import uxui from "../../assets/uxui.png";
-import { Intersection, TriangleIntersection } from "./SkillsStyles";
 
 export default function Skills({ skillsRef }) {
   return (
     <SkillsWrapper>
+      <Intersection>
+        <TriangleIntersection />
+      </Intersection>
       <SkillsContainer>
         <SkillContainer ref={skillsRef}>
           <img src={frontend} alt="front-end icon" />
@@ -20,7 +28,7 @@ export default function Skills({ skillsRef }) {
         <SkillContainer>
           <img src={backend} alt="back-end icon" />
           <h3>Back-end</h3>
-          <p>Node, Express, GraphQL, SQL, Apollo, MongoDb, Python, Django.</p>
+          <p>Node, Express, GraphQL, SQL, MongoDb, Python, Django.</p>
         </SkillContainer>
         <SkillContainer>
           <img src={uxui} alt="u x u i icon" />
@@ -28,9 +36,6 @@ export default function Skills({ skillsRef }) {
           <p>Figma, Inkscape, Pinta, Gimp.</p>
         </SkillContainer>
       </SkillsContainer>
-      {/* <Intersection>
-        <TriangleIntersection />
-      </Intersection> */}
     </SkillsWrapper>
   );
 }
