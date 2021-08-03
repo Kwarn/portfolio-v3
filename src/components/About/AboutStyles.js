@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
-  background: #051320;
+  background: #f4a261;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -12,7 +12,7 @@ export const AboutWrapper = styled.div`
   position: relative;
   overflow: hidden;
   @media (min-width: 900px) {
-    background: linear-gradient(to bottom, #051320 30%, #ffffdb);
+    background: linear-gradient(to bottom, #f4a261 30%, #e9c46a);
   }
 `;
 

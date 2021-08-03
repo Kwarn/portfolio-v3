@@ -1,7 +1,7 @@
 import React from "react";
 import {
   ProjectsWrapper,
-  Background,
+  ProjectsHeader,
   ProjectTile,
   TextContainer,
   ProjectsFooter,
@@ -30,14 +30,12 @@ export default function Projects({ projectsRef, modalHandler }) {
 
   return (
     <ProjectsWrapper>
-      <Background src={projectsBackground} alt="projects-background" />
+      <ProjectsHeader src={projectsBackground} alt="projects-background" />
       <TextContainer ref={projectsRef}>
         <h1>Projects</h1>
         <p>
           Built from the ground up with the goal of achieving a strong grasp of
-          how popular design principles and components are implimented, these
-          projects demonstrate multiple approaches to building front & back-end
-          systems.
+          the implementation of popular design principles and components.
         </p>
       </TextContainer>
       {projectData.map((project, i) => (

@@ -1,97 +1,54 @@
 import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
-  height: 125vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @media (min-width: 1200px) {
-    height: 140vh;
-  }
+  background-color: #2a9d8f;
+  overflow: hidden;
 `;
 
 export const Background = styled.img`
+  z-index: -1;
   position: absolute;
   object-fit: cover;
   width: 100%;
-  height: 125vh;
-  @media (min-width: 1200px) {
-    height: 140vh;
-  }
-`;
-
-export const SocialIconsContainer = styled.div`
-  background-color: white;
-  mix-blend-mode: difference;
-  z-index: 3;
-  margin: -2vh auto auto auto;
-  width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 15px;
-  a {
-    margin: auto;
-    padding: 0;
-  }
-  @media (min-width: 900px) {
-    background-color: #eee;
-    mix-blend-mode: difference;
-    margin: auto;
-    width: 200px;
-    position: absolute;
-    top: 2vh;
-    right: 2vw;
-    height: 60px;
-    a {
-      margin: 8px auto auto auto;
-    }
-  }
-`;
-
-export const SocialIcon = styled.img`
-  mix-blend-mode: normal;
-  z-index: 3;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  margin: auto;
-  border: 2px solid black;
-  &:hover {
-    background-color: cyan;
-    border: 2px solid cyan;
-  }
+  height: 100vh;
 `;
 
 export const MenuOptionsContainer = styled.div`
-  mix-blend-mode: difference;
-  position: absolute;
-  top: 2vh;
+  margin: 1vh auto;
   z-index: 2;
   font-family: "Teko";
   width: 100%;
   height: 40px;
   display: flex;
   justify-content: space-around;
+
+  @media (min-width: 500px) {
+    width: 80%;
+  }
+
   @media (min-width: 900px) {
-    max-width: 50%;
-    right: calc(3vw + 200px);
+    width: calc(100% - 320px);
+    position: absolute;
+    left: calc(20px + 300px);
     top: calc(2vh + 20px);
   }
   @media (min-width: 1200px) {
-    width: 600px;
+    width: 500px;
     height: 60px;
+    left: 340px;
     top: calc(2vh + 5px);
   }
 `;
-
 export const MenuOption = styled.p`
   z-index: 3;
   cursor: pointer;
-  font-size: 5vw;
+  font-size: 18px;
   color: #eee;
   width: fit-content;
   margin: auto;
@@ -108,11 +65,61 @@ export const MenuOption = styled.p`
   }
 `;
 
-export const WelcomeElementsContainer = styled.div`
-  margin: auto auto 0 auto;
+export const ProfileContainer = styled.div`
+  margin: 1vh auto 1vh auto;
+  width: 100%;
+  display: flex;
   justify-content: center;
   position: relative;
-  mix-blend-mode: difference;
+  flex-direction: row;
+  @media (min-width: 900px) {
+    width: auto;
+    margin: 1vh auto 1vh 1vw;
+  }
+`;
+
+export const ProfileImage = styled.img`
+  margin: auto 0 auto auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+`;
+
+export const SocialIconsContainer = styled.div`
+  background-color: #c5525f;
+  z-index: 3;
+  margin: auto auto auto 2vw;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  a {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+  @media (min-width: 900px) {
+    margin: auto auto auto 20px;
+    width: 200px;
+  }
+`;
+
+export const SocialIcon = styled.img`
+  mix-blend-mode: normal;
+  z-index: 3;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border: 2px solid transparent;
+  &:hover {
+    background-color: cyan;
+    border: 2px solid cyan;
+  }
 `;
 
 export const HelloText = styled.h1`
@@ -122,14 +129,14 @@ export const HelloText = styled.h1`
   position: relative;
   mix-blend-mode: difference;
   font-size: 30vw;
-  margin: auto;
+  margin: 15vh auto auto auto;
   z-index: 1;
   @media (min-width: 900px) {
-    margin-top: -15vh;
+    /* margin-top: -15vh; */
     font-size: 30vw;
   }
   @media (min-width: 1200px) {
-    margin-top: -25vh;
+    /* margin-top: -25vh; */
     font-size: 350px;
   }
 `;
@@ -146,7 +153,7 @@ export const DownArrow = styled.img`
     bottom: 5vh;
   }
   @media (min-width: 1200px) {
-    bottom: 10vh;
+    bottom: 5vh;
   }
 `;
 
@@ -170,11 +177,10 @@ export const TriangleIntersectionLeft = styled.div`
 
 export const TriangleIntersectionRight = styled.div`
   position: absolute;
-  bottom: -2px;
+  bottom: 0px;
   right: 0;
   width: 0;
   height: 0;
   border-top: 10vw solid transparent;
-  /* border-bottom: 0px solid transparent; */
   border-right: 50vw solid #051320;
 `;

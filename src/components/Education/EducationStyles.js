@@ -5,8 +5,9 @@ export const EducationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #6e8992;
-  color: white;
+  /* background-color: #6e8992; */
+  background-color: #2a9d8f;
+  color: #eee;
 `;
 
 export const EducationHeader = styled.div`
@@ -21,7 +22,7 @@ export const EducationHeader = styled.div`
   height: 300px;
   h1 {
     z-index: 2;
-    margin: auto auto 0 auto;
+    margin: auto auto -10px auto;
   }
   @media (min-width: 1200px) {
     height: 500px;
@@ -57,7 +58,7 @@ export const TextSectionsContainer = styled.div`
 `;
 
 export const ImagesContainer = styled.div`
-  margin: auto;
+  margin: auto auto 5vh auto;
   width: 80%;
   display: flex;
   flex-direction: row;

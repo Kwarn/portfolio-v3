@@ -9,7 +9,7 @@ export const ProjectWrapper = styled.div`
 `;
 
 export const ProjectTitle = styled.h1`
-  margin: auto auto 0 auto;
+  margin: auto auto 5vh auto;
   @media (min-width: 1200px) {
     font-size: 50px;
   }
@@ -21,6 +21,7 @@ export const ProjectDescription = styled.p`
   margin: 0 auto auto auto;
   width: 80%;
   font-size: 12px;
+  white-space: pre-line;
   @media (min-width: 800px) {
     width: 70%;
     line-height: 30px;
@@ -33,20 +34,29 @@ export const ProjectDescription = styled.p`
   }
 `;
 
-export const LinksContainer = styled.div`
-  margin: 5vh auto 5vh auto;
+export const LinksWrapper = styled.div`
+  margin: 1vh auto;
   width: 80%;
-  @media (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: row;
-    flex-wrap: wrap;
-    margin: 1vh auto 2vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  h3 {
+    margin: 0 auto;
+  }
+  @media (min-width: 600px) {
+    max-width: 400px;
   }
 `;
 
+export const LinksContainer = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 export const Link = styled.a`
-  margin: 0 10px auto 10px;
+  margin: auto;
   @media (min-width: 1200px) {
     font-size: 18px;
   }

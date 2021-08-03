@@ -33,9 +33,11 @@ const ExtraInfo = ({ modalHandler }) => {
     return image;
   };
 
-  const description = `Playing a pivotal role in improving my problem solving skills, coding challenges have also exposed me to which language features are available and their correct situational usage. I love the pursuit of the solution, from discovering new helpful resources to testing solutions in an isolated environment and organically discovering the language's inner workings.  
+  const description = `Playing a pivotal role in improving my problem solving skills, coding challenges have also exposed me to which language features are available and their correct situational usage. 
   
-  I'm constantly challenging myself by not just solving the problem but also searching for and understanding the most elegant solutions. So far, I've completed all challenges on CodingBat, earned 1800 XP on Edabit solving primarily medium-hard difficulty problems and am currently working through certification on HackerRank.`;
+  I'm constantly challenging myself by not just solving the problem but also searching for and understanding the most elegant solutions. 
+  
+  So far, I've completed all challenges on CodingBat, earned 1800 XP on Edabit solving primarily medium-hard difficulty problems and am currently working through certification on HackerRank.`;
 
   return (
     <ExtraInfoWrapper>

@@ -6,23 +6,26 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #f4a261;
+  color: black;
 `;
 
-export const Background = styled.img`
-  z-index: -1;
+export const ProjectsHeader = styled.img`
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 20vh;
   object-fit: cover;
+  object-position: bottom;
 `;
 
 export const TextContainer = styled.div`
-  color: #eee;
-  margin: 20vh auto 5vh auto;
+  margin: 20vh auto 2vh auto;
   width: 80%;
   h1 {
+    font-family: "Ruluko";
     text-align: center;
   }
   p {
@@ -54,7 +57,6 @@ export const ProjectTile = styled.div`
   transition: background-color 0.8s ease;
   &:hover {
     background-color: cyan;
-    background-position: right;
   }
   border-radius: 5px;
   box-shadow: 2px;
@@ -63,11 +65,11 @@ export const ProjectTile = styled.div`
   width: 80%;
 
   h2 {
-    /* font-family: "Teko"; */
+    font-family: "Teko";
     margin: 10px auto 10px auto;
   }
   p {
-    font-family: "Ruluko";
+    font-family: "Teko";
     margin: 0px 5px 10px 5px;
   }
 
@@ -77,21 +79,20 @@ export const ProjectTile = styled.div`
   @media (min-width: 1200px) {
     max-width: 600px;
     h2 {
-      font-size: 30px;
+      font-size: 35px;
     }
     p {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
 `;
 
 export const ProjectsFooter = styled.p`
   text-align: center;
-  color: #eee;
   margin: 5vh auto 15vh auto;
   width: 80%;
   a {
-    color: inherit;
+    color: white;
     font-weight: 400;
   }
 `;

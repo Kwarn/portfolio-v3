@@ -4,6 +4,7 @@ import {
   ProjectDescription,
   ProjectTitle,
   ProjectWrapper,
+  LinksWrapper,
   Link,
 } from "./ProjectOverviewStyles";
 
@@ -47,10 +48,24 @@ export default function ProjectOverview({
   return (
     <ProjectWrapper>
       <ProjectTitle>{title}</ProjectTitle>
-      <LinksContainer>
-        {liveDemoLink ? createLinks(liveDemoLink, "Live-demo") : null}
-        {gitHubLink ? createLinks(gitHubLink, "Git-repo") : null}
-      </LinksContainer>
+      <LinksWrapper>
+        {liveDemoLink ? (
+          <LinksContainer>
+            <h3>Live demo </h3>
+            {createLinks(liveDemoLink)}
+          </LinksContainer>
+        ) : (
+          ""
+        )}
+        {gitHubLink ? (
+          <LinksContainer>
+            <h3>Github repo</h3>
+            {createLinks(gitHubLink)}
+          </LinksContainer>
+        ) : (
+          ""
+        )}
+      </LinksWrapper>
       <ProjectDescription>{description}</ProjectDescription>
     </ProjectWrapper>
   );

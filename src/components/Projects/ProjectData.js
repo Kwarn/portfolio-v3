@@ -12,11 +12,13 @@ import portfolioV2Image4 from "../../assets/portfoliov2image4.png";
 import portfolioV2Image5 from "../../assets/portfoliov2image5.png";
 import portfolioImage1 from "../../assets/portfolio1.png";
 import burgerBuilderImage1 from "../../assets/burgerbuilder1.png";
+import slotsGame from "../../assets/squarePlayground.png";
 import excelSearcherimage1 from "../../assets/excelsearcher1.png";
+import fitnessAppImage from "../../assets/fitness.png";
 
 export const projectData = [
   {
-    title: "E-Commerce",
+    title: "Current project",
     images: [
       ecommerceImage1,
       ecommerceImage2,
@@ -24,21 +26,20 @@ export const projectData = [
       ecommerceImage4,
       ecommerceImage5,
     ],
-    liveDemoLink: "https://e-commerce-d1b62.web.app/home",
+    liveDemoLink: { Ecommerce: "https://e-commerce-d1b62.web.app/home" },
     previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, AWS",
-    gitHubLink: "https://github.com/Kwarn/e-commerce",
+    gitHubLink: { Ecommerce: "https://github.com/Kwarn/e-commerce" },
     description: `
-    My current project and work in progess, built on behalf of a flooring wholesaler.
-    The current goal is to provide the client with a site they can login to as administrator and display/manage their products on, with the eventual goal of providing them the functionality to gain access to the retail market.
-    The current work on the site is focused around fleshing out administrator functionality to allow all CRUD operations via the back-end.
+    Built on behalf of a flooring wholesaler, with the primary goal of further practicing full-stack development.
+    The mission is to provide the client with a site they can manage and display their products on, with an end goal of completing the functionality to gain access to the retail market.
+    The current work on the site is focused on fleshing out administrator functionality to allow all CRUD operations via the back-end.
     `,
-    lessons: "",
     technicalPractices: `The frontend is built with React & styled-components.
     ApolloClient is used to handle state management and for it's GraphQl interface.
     The backend is a Node Express server which uses GraphQL for handling most requests, with the exception of storing images which uses a REST endpoint with multer-s3 to store images in an AWS S3 bucket.`,
   },
   {
-    title: "Node Projects",
+    title: "Node projects",
     images: [nodeProjectsImage1, nodeProjectsImage2],
     liveDemoLink: "",
     previewTechStack: "Javascript, Node, Graphql, MongoDB, AWS",
@@ -48,17 +49,17 @@ export const projectData = [
 
       "GraphQl-blog": "https://github.com/Kwarn/blog-REST-API/",
 
-      "React-blog": "https://github.com/Kwarn/blog-frontend",
+      "Blog front-end": "https://github.com/Kwarn/blog-frontend",
     },
     description: `
-    Built from the ground up, the goal of these projects was to provide me with a greater knowledge base from which to decide how to proceed with my current project's back-end.
-    The most valuable experience I gained from these projects was converting within the projects between multiple approaches, this gave me a solid understanding of the core principles and the varying ways of achieving them.
+    During my research on how to build the backend for my current project I decided to take a comprehensive NodeJs course to gain a more complete understanding of backend systems instead of piecing things together from docs & smaller tutorials.
+     These project were built & customized along the way.
+    The most valuable experience I gained from these projects was converting between different approaches within each project, this gave me a solid understanding of the core principles and the varying ways of achieving them.
     `,
-    lessons: `How API's work. Detailed understanding of common practices & design patterns.`,
     technicalPractices: ` The REST API uses EJS to serve HTML, nodemailer for signup & password reset processes, csurf with express-sessions and connect-mongodb-session, stripe for mock payments and pdfkit to generate invoices.
-    The app was converted from originally using an SQL database with sequelize to now use mongoDB with mongoose.
+    The app was originally used an SQL database with sequelize and now uses mongoDB with mongoose.
 
-    The GraphQL API uses Json-web-token & bcrypt to handle authentication, mongoose with MongoDB to store user data, multer to handle file uploads and validation is handled with express-validator and connect-flash.`,
+    The GraphQL API uses Json-web-token & bcrypt to handle authentication, mongoose with MongoDB to store user data, multer to handle file uploads and express-validator for validation.`,
   },
 
   {
@@ -81,29 +82,34 @@ export const projectData = [
       v2: "https://github.com/Kwarn/portfolio",
     },
     description: `
-      The portfolio has seen multiple renditions allowing me to practice various approaches to design and functionality.
        As I have improved over the years I've updated my portfolio to serve as a live example of my progress.
-        I found the v2 portfolio to have issues with responsiveness (mostly resolved now) due to experimenting with a desktop-first approach as apposed to the more conventional mobile-first approach.
-         The functionality of the v2 portfolio is arguably more technically impressive than the portfolio you're currently viewing,
-          however ultimately I felt the complexity of the design was detrimental to the UX and was built prior to a lot of design experimentation within figma.com
-      `,
-    lessons: `Effective debugging, finding and adapting solutions to my specific case. 
-      Debugging efficiently has been crucial to maintaining positivity, progress and keeping to my deadlines.
-      My abilty to predict why and where bugs are likely to occur has dramatically improved through practice. I’ve learned multiple techniques for locating the source of issues and thrive on the process of honing in on the best solutions.`,
+         The functionality of the v2 portfolio is likely more technically impressive than the portfolio you're currently viewing, however I felt the complexity of the design was ultimately detrimental to the UX, along with some pitfalls of experimenting with a less conventional desktop-first approach to responsiveness.`,
     technicalPractices:
-      "IntersectionObserver API for LazyLoading & scroll-to navigation, Function throttling to prevent scrolling through menu too quickly, EmailJS API allowing direct messaging from React to inbox, File-saver libary for direct downloading of CV from react, Form validation, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
+      "IntersectionObserver API for LazyLoading & scroll-to navigation, Function throttling to prevent scrolling through menu too quickly, EmailJS API allowing direct messaging from React to inbox, File-saver library for direct downloading of CV from react, Form validation, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
   },
   {
-    title: "Burger Builder",
-    images: [burgerBuilderImage1],
-    liveDemoLink: "https://react-burger-builder-679aa.web.app/",
+    title: "Other JS projects",
+    images: [burgerBuilderImage1, slotsGame],
+    liveDemoLink: {
+      "Burger Builder": "https://react-burger-builder-679aa.web.app/",
+      "Slots Game": "https://square-playground.web.app/",
+    },
     previewTechStack: "Javascript, React, Redux, Redux-Saga, Firebase, CSS",
-    gitHubLink: "https://github.com/Kwarn/burger-builder",
+    gitHubLink: {
+      "Sales Feedback": "https://github.com/Kwarn/lettings-feedback-aggregator",
+      "Burger Builder": "https://github.com/Kwarn/burger-builder",
+      "Slots Game": "https://github.com/Kwarn/square-playground",
+    },
     courseLink:
       "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
-    description: `Built alongside React The Complete Guide, This app allows users to create and order their own customized burger.
-      
-      The project greatly helped cement my understanding of React, Redux and the differences and nuances in approach when developing responsive react applications.`,
+    description: `
+    These are a few of my earlier projects.
+
+    Sales Feedback: Designed to work like SalesForce, displays analytics charts based on feedback from successful/failed lettings, on hold while current project takes precedence.
+    Burger builder: Create and order your own customized burger.
+    Slots Game: based on Math.random() my first attempt at react.
+    
+    `,
 
     lessons: `Asynchronous actions with Async-Await, Promises & Axios. Functional vs class based components.
       Through practising multiple popular approaches to asynchronous actions I've gained a solid understanding of how they fit into the larger React Ecosystem.
@@ -111,14 +117,17 @@ export const projectData = [
     technicalPractices: `Multiple approaches to handling State, Preservation of user's session with Authentication tokens and localStorage, Promises & Asynchronous actions with Thunk/Sagas & Fetch/Axios, Class-based components and Functional components, Higher order components, React.Memo and performance tweaks, Database rules configuration.`,
   },
   {
-    title: "Excel Searcher",
-    images: [excelSearcherimage1],
+    title: "Python projects",
+    images: [excelSearcherimage1, fitnessAppImage],
     previewTechStack: "Python, Tkinter, SQLite3",
-    gitHubLink: "https://github.com/Kwarn/Fizzy-Lookup",
-    description: `Desktop App which allows easier searching of excel data.
-      Built for the head of lettings for a boutique serviced apartments company, this project allowed me demonstrate and practice a real world use-case for what I had learned with Python.
-      
-      The app uses a data analysis library - pandas -to convert an excel spread-sheet to columns and rows displayed by tkinter (GUI library). The user can accurately search the data using a combination of 7 drop-down menus.`,
+    gitHubLink: {
+      "Excel Searcher": "https://github.com/Kwarn/Fizzy-Lookup",
+      "Fitness App": "https://github.com/Kwarn/fitness",
+    },
+    description: `
+      Python was the first "real" language I learned, these are my first projects.
+      Excel Searcher: Uses a data analysis library to convert an excel spreadsheet to columns and rows displayed by a GUI library, which is then searchable using a combination of 7 drop-down menus.
+      Fitness App: tracks/stores workout & meals caloric information.`,
     lessons: `The importance of accurately communicating a description of the clients needs so that unnecessary or miscommunicated functionality didn't waste development time.`,
 
     technicalPractices:

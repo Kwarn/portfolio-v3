@@ -7,15 +7,16 @@ export const ExtraInfoWrapper = styled.div`
   font-family: "Ruluko";
   line-height: 25px;
   justify-content: center;
-  background: url("../../assets/background2.jpg");
-  background-size: cover;
+  background: #264653;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ExtraInfoContainer = styled.div`
-  color: #474747;
+  z-index: 2;
+  color: #ccc;
   margin: 20vh 15px 20vh 15px;
   text-align: center;
-  box-shadow: 0 0 5px 5px white inset;
   padding: 20px;
   h2 {
     text-align: center;

@@ -31,18 +31,11 @@ export default function Education({ educationRef, modalHandler }) {
       </EducationHeader>
       <TextSectionsContainer ref={educationRef}>
         <p>
-          Developing effective learning strategies has been fundamental in
-          allowing me to fully digest the - at times - overwhelming amount of
-          information contained throughout the numerous courses and tutorials
-          I've taken.
-        </p>
-        <br />
-        <p>
           I've found by challenging myself to code first wherever possible,
           avoiding copy/pasting of code, taking detailed notes and utilizing the
-          'rubber ducky' method, I'm able to better understand and retain
-          knowledge. This approach has been key to maintaining consistent
-          progress, positivity and motivation;
+          'rubber ducky' method, I'm able to better absorb and retain knowledge.
+          This approach has been key to maintaining consistent progress and
+          positivity.
         </p>
       </TextSectionsContainer>
       <ImagesContainer>

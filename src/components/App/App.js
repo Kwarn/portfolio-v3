@@ -9,6 +9,8 @@ import Education from "../Education/Education";
 import Modal from "../../UI/Modal/Modal";
 import ExtraInfo from "../CodeChallenges/ExtraInfo";
 import GoToTop from "../../UI/GoToTop/GoToTop";
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [modalControl, setModalControl] = useState({
@@ -20,7 +22,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Ruluko", "Teko", "Secular One"],
+        families: ["Ruluko", "Teko", "Secular One", "Courier New"],
       },
     });
   }, []);
@@ -48,6 +50,7 @@ function App() {
     projects: useRef(null),
     designs: useRef(null),
     education: useRef(null),
+    contact: useRef(null),
     // contact: useRef(null),
   };
 
@@ -66,7 +69,6 @@ function App() {
         homeRef={elementRefs.home}
         scrollIntoView={(refName) => scrollIntoView(refName)}
       />
-      <About aboutRef={elementRefs.about} />
       <Skills skillsRef={elementRefs.skills} />
       <Projects
         projectsRef={elementRefs.projects}
@@ -78,6 +80,9 @@ function App() {
         modalHandler={(options) => modalHandler(options)}
       />
       <ExtraInfo modalHandler={(options) => modalHandler(options)} />
+      <About aboutRef={elementRefs.about} />
+      <Contact contactRef={elementRefs.contact} />
+      <Footer />
       <GoToTop scrollIntoView={(refName) => scrollIntoView(refName)} />
     </div>
   );

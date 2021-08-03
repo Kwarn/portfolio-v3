@@ -13,9 +13,9 @@ import uxui from "../../assets/uxui.png";
 export default function Skills({ skillsRef }) {
   return (
     <SkillsWrapper>
-      <Intersection>
+      {/* <Intersection>
         <TriangleIntersection />
-      </Intersection>
+      </Intersection> */}
       <SkillsContainer>
         <SkillContainer ref={skillsRef}>
           <img src={frontend} alt="front-end icon" />

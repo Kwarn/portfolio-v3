@@ -6,7 +6,7 @@ export const DesignsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffdb;
+  background-color: #e9c46a;
   overflow: hidden;
   padding-bottom: 15vh;
 `;
