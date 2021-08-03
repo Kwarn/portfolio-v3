@@ -20,6 +20,7 @@ import {
   Intersection,
   ProfileContainer,
   ProfileImage,
+  SocialLink,
 } from "./HomeStyles";
 
 export default function Home({ homeRef, scrollIntoView }) {
@@ -34,25 +35,23 @@ export default function Home({ homeRef, scrollIntoView }) {
       <ProfileContainer>
         <ProfileImage src={profileImage} alt="profile pic" />
         <SocialIconsContainer>
-          <a
+          <SocialLink
             href="https://github.com/Kwarn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={githubIcon} alt="github profile link" />
-          </a>
-          <a
+            <img src={githubIcon} alt="github profile link" />
+          </SocialLink>
+          <SocialLink
             href="https://www.linkedin.com/in/karl-warner-9147661b5/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SocialIcon src={linkedinIcon} alt="linked in profile link" />
-          </a>
-          <SocialIcon
-            src={downloadCVIcon}
-            alt="download cv link"
-            onClick={saveFile}
-          />
+            <img src={linkedinIcon} alt="linked in profile link" />
+          </SocialLink>
+          <SocialLink onClick={saveFile}>
+            <p>CV</p>
+          </SocialLink>
         </SocialIconsContainer>
       </ProfileContainer>
       <MenuOptionsContainer ref={homeRef}>

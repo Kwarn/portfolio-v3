@@ -95,30 +95,49 @@ export const SocialIconsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   border-radius: 15px;
-  a {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding: 0;
-  }
+
   @media (min-width: 900px) {
     margin: auto auto auto 20px;
     width: 200px;
   }
 `;
 
-export const SocialIcon = styled.img`
-  mix-blend-mode: normal;
-  z-index: 3;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  margin: auto;
-  border: 2px solid transparent;
-  &:hover {
-    background-color: cyan;
-    border: 2px solid cyan;
+export const SocialLink = styled.a`
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  img {
+    mix-blend-mode: normal;
+    z-index: 3;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: 2px solid transparent;
+    &:hover {
+      background-color: cyan;
+      border: 2px solid cyan;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #c5525f;
+    line-height: 36px;
+    text-align: center;
+    background-color: #eee;
+    margin: auto;
+    z-index: 3;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #eee;
+    &:hover {
+      color: cyan;
+      border: 3px solid cyan;
+    }
   }
 `;
 

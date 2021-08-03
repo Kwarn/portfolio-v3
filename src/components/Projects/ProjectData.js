@@ -30,7 +30,7 @@ export const projectData = [
     previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, AWS",
     gitHubLink: { Ecommerce: "https://github.com/Kwarn/e-commerce" },
     description: `
-    Built on behalf of a flooring wholesaler, with the primary goal of further practicing full-stack development.
+    Built on behalf of a flooring wholesaler.
     The mission is to provide the client with a site they can manage and display their products on, with an end goal of completing the functionality to gain access to the retail market.
     The current work on the site is focused on fleshing out administrator functionality to allow all CRUD operations via the back-end.
     `,

@@ -6,7 +6,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f4a261;
+  background-color: #2a9d8f;
   color: black;
 `;
 

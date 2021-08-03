@@ -34,8 +34,8 @@ export default function Projects({ projectsRef, modalHandler }) {
       <TextContainer ref={projectsRef}>
         <h1>Projects</h1>
         <p>
-          Built from the ground up with the goal of achieving a strong grasp of
-          the implementation of popular design principles and components.
+          Built from the ground up to achieve a strong understanding of the
+          implementation of popular components and design principles.
         </p>
       </TextContainer>
       {projectData.map((project, i) => (

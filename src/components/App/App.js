@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Ruluko", "Teko", "Secular One", "Courier New"],
+        families: ["Ruluko", "Teko", "Secular One"],
       },
     });
   }, []);

@@ -6,7 +6,7 @@ export const SkillsWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  background: linear-gradient(to bottom, #c5525f, #f4a261 95%);
+  background: #f4a261;
   text-align: center;
   color: black;
 `;

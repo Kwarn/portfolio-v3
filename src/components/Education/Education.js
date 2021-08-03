@@ -31,11 +31,22 @@ export default function Education({ educationRef, modalHandler }) {
       </EducationHeader>
       <TextSectionsContainer ref={educationRef}>
         <p>
-          I've found by challenging myself to code first wherever possible,
-          avoiding copy/pasting of code, taking detailed notes and utilizing the
-          'rubber ducky' method, I'm able to better absorb and retain knowledge.
-          This approach has been key to maintaining consistent progress and
-          positivity.
+          I practice a methodical strategy to learning which has been
+          fundamental in maintaining consistent progress and positivity, while
+          also greatly improving my understanding and knowledge retention.
+        </p>
+        <br />
+        <p>
+          This is done through challenging myself to attempt solving problems
+          before immediately searching for a solution, I've found this to better
+          train my logical reasoning abilities and makes me better aware of the
+          value of any solutions I later find.
+        </p>
+        <br />
+        <p>
+          As a rule, I avoid copy/pasting code and in the rare event that I do,
+          either I wrote it or I fully understand what it is doing. Finally I
+          take detailed notes and utilize the 'rubber ducky' method.
         </p>
       </TextSectionsContainer>
       <ImagesContainer>
