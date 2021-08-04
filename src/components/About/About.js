@@ -1,20 +1,20 @@
 import React from "react";
 import {
   AboutWrapper,
-  ProfileImage,
-  Name,
-  AboutMeText,
   Grid,
-  Slope,
-  CenterLine,
   StyledFadeEffect,
-  AboutMeTextContainer,
   CodeBackground,
   ProfileContainer,
+  ProfileImage,
+  Name,
   JobTitle,
+  AboutMeTextContainer,
+  AboutMeText,
+  Slope,
+  CenterLine,
 } from "./AboutStyles";
-import profileImage from "../../assets/profileImage.png";
 import background from "../../assets/vsCodeBg.png";
+import profileImage from "../../assets/profileImage.png";
 
 export default function About({ aboutRef }) {
   return (

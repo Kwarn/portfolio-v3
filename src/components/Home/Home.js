@@ -1,23 +1,23 @@
 import React from "react";
+import FileSaver from "file-saver";
 import background from "../../assets/homeBackground.jpg";
+import profileImage from "../../assets/profileImage.png";
 import githubIcon from "../../assets/github.png";
 import linkedinIcon from "../../assets/linkedin.png";
 import whiteDownArrowIcon from "../../assets/whiteDownArrow.png";
-import profileImage from "../../assets/profileImage.png";
-import FileSaver from "file-saver";
 import {
   HomeWrapper,
   Background,
-  SocialIconsContainer,
-  HelloText,
-  MenuOptionsContainer,
-  MenuOption,
-  DownArrow,
-  TriangleIntersectionRight,
-  Intersection,
   ProfileContainer,
   ProfileImage,
+  SocialIconsContainer,
   SocialLink,
+  MenuOptionsContainer,
+  MenuOption,
+  HelloText,
+  DownArrow,
+  Intersection,
+  TriangleIntersectionRight,
 } from "./HomeStyles";
 
 export default function Home({ homeRef, scrollIntoView }) {

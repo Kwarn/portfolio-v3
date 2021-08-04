@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  LinksContainer,
-  ProjectDescription,
-  ProjectTitle,
   ProjectWrapper,
+  ProjectTitle,
   LinksWrapper,
+  LinksContainer,
   Link,
+  ProjectsFooter,
 } from "./ProjectOverviewStyles";
 
 export default function ProjectOverview({
@@ -66,7 +66,7 @@ export default function ProjectOverview({
           ""
         )}
       </LinksWrapper>
-      <ProjectDescription>{description}</ProjectDescription>
+      <ProjectsFooter>{description}</ProjectsFooter>
     </ProjectWrapper>
   );
 }

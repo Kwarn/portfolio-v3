@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import Backdrop from "../Backdrop/Backdrop";
-import styled from "styled-components";
 import swipeIcon from "../../assets/swipe.png";
 import closeIcon from "../../assets/closeIcon.png";
-import { useSwipeable } from "react-swipeable";
 import documentIcon from "../../assets/document.png";
+import styled from "styled-components";
 
 const StyledModal = styled.div`
   margin-left: 5%;

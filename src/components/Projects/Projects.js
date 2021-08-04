@@ -1,15 +1,15 @@
 import React from "react";
-import {
-  ProjectsWrapper,
-  ProjectsHeader,
-  ProjectTile,
-  TextContainer,
-  ProjectsFooter,
-} from "./ProjectsStyles";
-import projectsBackground from "../../assets/background5.jpg";
 import { projectData } from "./ProjectData";
 import ProjectOverview from "./ProjectOverview/ProjectOverview";
 import ProjectTechnical from "./ProjectTechnical/ProjectTechnical";
+import projectsBackground from "../../assets/background5.jpg";
+import {
+  ProjectsWrapper,
+  ProjectsHeader,
+  TextContainer,
+  ProjectTile,
+  ProjectsFooter,
+} from "./ProjectsStyles";
 
 export default function Projects({ projectsRef, modalHandler }) {
   const ProjectOverviews = [];
@@ -21,7 +21,7 @@ export default function Projects({ projectsRef, modalHandler }) {
     );
     ProjectTechnicals.push(
       <ProjectTechnical
-        key={`${p.title} technical`}
+        key={`${p.title} technical info`}
         previewTechStack={p.previewTechStack}
         technicalPractices={p.technicalPractices}
       />
@@ -30,7 +30,7 @@ export default function Projects({ projectsRef, modalHandler }) {
 
   return (
     <ProjectsWrapper>
-      <ProjectsHeader src={projectsBackground} alt="projects-background" />
+      <ProjectsHeader src={projectsBackground} alt="projects background" />
       <TextContainer ref={projectsRef}>
         <h1>Projects</h1>
         <p>

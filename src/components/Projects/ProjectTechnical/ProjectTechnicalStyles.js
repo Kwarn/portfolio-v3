@@ -27,7 +27,6 @@ export const TechIconsContainer = styled.div`
     width: 30%;
   }
 `;
-
 export const TechIcon = styled.img`
   margin: auto;
   height: 40px;
@@ -36,7 +35,6 @@ export const TechIcon = styled.img`
     height: 50px;
   }
 `;
-
 export const TechText = styled.p`
   text-align: left;
   margin: 5vh auto auto auto;

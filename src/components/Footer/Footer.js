@@ -18,7 +18,7 @@ const FooterWrapper = styled.div`
 export default function Footer() {
   return (
     <FooterWrapper>
-      <p>Website designed and built from the ground up with React.</p>
+      <p>Site designed with Figma and built from the ground up with React.</p>
     </FooterWrapper>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "./ContactForm/ContactForm";
 import {
   ContactWrapper,
   Intersection,
@@ -6,7 +7,6 @@ import {
   ContactContainer,
   TextContainer,
 } from "./ContactStyles";
-import ContactForm from "./ContactForm/ContactForm";
 
 export default function Contact({ contactRef }) {
   return (

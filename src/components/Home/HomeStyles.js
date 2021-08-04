@@ -19,6 +19,80 @@ export const Background = styled.img`
   height: 100vh;
 `;
 
+export const ProfileContainer = styled.div`
+  margin: 1vh auto 1vh auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  @media (min-width: 900px) {
+    width: auto;
+    margin: 1vh auto 1vh 1vw;
+  }
+`;
+export const ProfileImage = styled.img`
+  margin: auto 0 auto auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+`;
+
+export const SocialIconsContainer = styled.div`
+  background-color: #c5525f;
+  z-index: 3;
+  margin: auto auto auto 2vw;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+
+  @media (min-width: 900px) {
+    margin: auto auto auto 20px;
+    width: 200px;
+  }
+`;
+export const SocialLink = styled.a`
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  img {
+    mix-blend-mode: normal;
+    z-index: 3;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: 2px solid transparent;
+    &:hover {
+      background-color: cyan;
+      border: 2px solid cyan;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #c5525f;
+    line-height: 36px;
+    text-align: center;
+    background-color: #eee;
+    margin: auto;
+    z-index: 3;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #eee;
+    &:hover {
+      color: cyan;
+      border: 3px solid cyan;
+    }
+  }
+`;
+
 export const MenuOptionsContainer = styled.div`
   margin: 1vh auto;
   z-index: 2;
@@ -65,82 +139,6 @@ export const MenuOption = styled.p`
   }
 `;
 
-export const ProfileContainer = styled.div`
-  margin: 1vh auto 1vh auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-direction: row;
-  @media (min-width: 900px) {
-    width: auto;
-    margin: 1vh auto 1vh 1vw;
-  }
-`;
-
-export const ProfileImage = styled.img`
-  margin: auto 0 auto auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-`;
-
-export const SocialIconsContainer = styled.div`
-  background-color: #c5525f;
-  z-index: 3;
-  margin: auto auto auto 2vw;
-  width: 100%;
-  max-width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 15px;
-
-  @media (min-width: 900px) {
-    margin: auto auto auto 20px;
-    width: 200px;
-  }
-`;
-
-export const SocialLink = styled.a`
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  img {
-    mix-blend-mode: normal;
-    z-index: 3;
-    border-radius: 50%;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    margin: auto;
-    border: 2px solid transparent;
-    &:hover {
-      background-color: cyan;
-      border: 2px solid cyan;
-    }
-  }
-  p {
-    font-size: 20px;
-    font-weight: bolder;
-    color: #c5525f;
-    line-height: 36px;
-    text-align: center;
-    background-color: #eee;
-    margin: auto;
-    z-index: 3;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 3px solid #eee;
-    &:hover {
-      color: cyan;
-      border: 3px solid cyan;
-    }
-  }
-`;
-
 export const HelloText = styled.h1`
   padding: 0;
   color: #eee;
@@ -181,17 +179,6 @@ export const Intersection = styled.div`
   z-index: 1;
   width: 100%;
   position: relative;
-`;
-
-export const TriangleIntersectionLeft = styled.div`
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 10vw solid transparent;
-  /* border-bottom: 0px solid transparent; */
-  border-left: 50vw solid #051320;
 `;
 
 export const TriangleIntersectionRight = styled.div`

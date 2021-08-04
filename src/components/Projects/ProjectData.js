@@ -30,8 +30,7 @@ export const projectData = [
     previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, AWS",
     gitHubLink: { Ecommerce: "https://github.com/Kwarn/e-commerce" },
     description: `
-    Built on behalf of a flooring wholesaler.
-    The mission is to provide the client with a site they can manage and display their products on, with an end goal of completing the functionality to gain access to the retail market.
+    Built on behalf of Q&Y - a flooring wholesaler, the mission is to provide the client with a site they can manage and display their products on, with an end goal of completing the functionality to gain access to the retail market.
     The current work on the site is focused on fleshing out administrator functionality to allow all CRUD operations via the back-end.
     `,
     technicalPractices: `The frontend is built with React & styled-components.
@@ -108,12 +107,7 @@ export const projectData = [
     Sales Feedback: Designed to work like SalesForce, displays analytics charts based on feedback from successful/failed lettings, on hold while current project takes precedence.
     Burger builder: Create and order your own customized burger.
     Slots Game: based on Math.random() my first attempt at react.
-    
     `,
-
-    lessons: `Asynchronous actions with Async-Await, Promises & Axios. Functional vs class based components.
-      Through practising multiple popular approaches to asynchronous actions I've gained a solid understanding of how they fit into the larger React Ecosystem.
-      I found one of the most impactful practice in this project was to convert the app from mostly older class-based components using lifecycle hooks (componentDidMount) to newer functional components using React Hooks (useEffect).`,
     technicalPractices: `Multiple approaches to handling State, Preservation of user's session with Authentication tokens and localStorage, Promises & Asynchronous actions with Thunk/Sagas & Fetch/Axios, Class-based components and Functional components, Higher order components, React.Memo and performance tweaks, Database rules configuration.`,
   },
   {
@@ -128,8 +122,6 @@ export const projectData = [
       Python was the first "real" language I learned, these are my first projects.
       Excel Searcher: Uses a data analysis library to convert an excel spreadsheet to columns and rows displayed by a GUI library, which is then searchable using a combination of 7 drop-down menus.
       Fitness App: tracks/stores workout & meals caloric information.`,
-    lessons: `The importance of accurately communicating a description of the clients needs so that unnecessary or miscommunicated functionality didn't waste development time.`,
-
     technicalPractices:
       "Importing and reading XML files with Pandas, Tkinter scrollable canvas frames, Multiple uses of widgets, Grid place & pack layout management, Commutative search algorithm.",
   },

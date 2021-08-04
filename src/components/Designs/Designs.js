@@ -1,14 +1,14 @@
 import React from "react";
+import slopesImage from "../../assets/slopes.png";
+import climbingImage from "../../assets/climbing.png";
+import gymImage from "../../assets/gym.png";
+import gardeningImage from "../../assets/gardening.png";
 import {
   DesignsWrapper,
-  Image,
-  ImageContainer,
   TextSectionsContainer,
+  ImageContainer,
+  Image,
 } from "./DesignsStyles";
-import slopesImage from "../../assets/slopes.png";
-import gardeningImage from "../../assets/gardening.png";
-import gymImage from "../../assets/gym.png";
-import climbingImage from "../../assets/climbing.png";
 
 export default function Designs({ designsRef }) {
   return (

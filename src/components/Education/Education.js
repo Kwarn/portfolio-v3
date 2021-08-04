@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  EducationWrapper,
-  TextSectionsContainer,
-  ImagesContainer,
-  Image,
-  EducationHeader,
-} from "./EducationStyles";
 import educationBackground from "../../assets/studyingBackground2.jpg";
 import nodeCertificate from "../../assets/nodeCertificate.jpg";
 import reactCertificate from "../../assets/reactCertificate.jpg";
@@ -13,6 +6,13 @@ import typescriptCertificate from "../../assets/typescriptCertificate.jpg";
 import javascriptCertificate from "../../assets/javascriptCertificate.jpg";
 import freeCodeCampCertificate from "../../assets/freeCodeCampCertificate.png";
 import sqlCodeAcademyCertificate from "../../assets/sqlCodeAcademyCertificate.png";
+import {
+  EducationWrapper,
+  EducationHeader,
+  TextSectionsContainer,
+  ImagesContainer,
+  Image,
+} from "./EducationStyles";
 
 export default function Education({ educationRef, modalHandler }) {
   const certificates = [

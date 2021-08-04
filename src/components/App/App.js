@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import About from "../About/About";
-import Home from "../Home/Home";
-import Projects from "../Projects/Projects";
-import Skills from "../Skills/Skills";
 import WebFont from "webfontloader";
+import Modal from "../../UI/Modal/Modal";
+import Home from "../Home/Home";
+import Skills from "../Skills/Skills";
+import Projects from "../Projects/Projects";
 import Designs from "../Designs/Designs";
 import Education from "../Education/Education";
-import Modal from "../../UI/Modal/Modal";
 import ExtraInfo from "../CodeChallenges/ExtraInfo";
-import GoToTop from "../../UI/GoToTop/GoToTop";
+import About from "../About/About";
 import Contact from "../Contact/Contact";
+import GoToTop from "../../UI/GoToTop/GoToTop";
 import Footer from "../Footer/Footer";
 
 function App() {

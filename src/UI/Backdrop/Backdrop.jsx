@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledBackdrop = styled.div`
-  /* pointer-events: none; */
   width: 100%;
   height: 100%;
   position: fixed;

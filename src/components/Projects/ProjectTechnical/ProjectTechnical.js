@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  ProjectTechnicalWrapper,
-  TechHeader,
-  TechIcon,
-  TechIconsContainer,
-  TechText,
-} from "./ProjectTechnicalStyles";
 import apollo from "../../../assets/apollo.png";
 import aws from "../../../assets/aws.png";
 import css from "../../../assets/css.png";
@@ -19,6 +12,13 @@ import react from "../../../assets/react.png";
 import redux from "../../../assets/redux.png";
 import reduxsaga from "../../../assets/reduxsaga.png";
 import sqlite3 from "../../../assets/sqlite3.png";
+import {
+  ProjectTechnicalWrapper,
+  TechHeader,
+  TechIconsContainer,
+  TechIcon,
+  TechText,
+} from "./ProjectTechnicalStyles";
 
 export default function ProjectTechnical({
   previewTechStack,

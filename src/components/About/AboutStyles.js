@@ -109,7 +109,6 @@ export const ProfileContainer = styled.div`
     margin: auto -5vw auto auto;
   }
 `;
-
 export const ProfileImage = styled.img`
   margin: auto auto 2vh auto;
   height: 150px;
@@ -126,7 +125,6 @@ export const ProfileImage = styled.img`
     width: 220px;
   }
 `;
-
 export const JobTitle = styled.h2`
   z-index: 4;
   width: 100%;
@@ -147,7 +145,6 @@ export const AboutMeTextContainer = styled.div`
     margin: auto auto;
   }
 `;
-
 export const Name = styled.h1`
   text-align: center;
   margin: auto;
@@ -156,7 +153,6 @@ export const Name = styled.h1`
     margin: 0 auto;
   }
 `;
-
 export const AboutMeText = styled.p`
   text-align: left;
   line-height: 25px;
