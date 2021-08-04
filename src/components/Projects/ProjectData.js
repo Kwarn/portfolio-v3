@@ -26,9 +26,12 @@ export const projectData = [
       ecommerceImage4,
       ecommerceImage5,
     ],
-    liveDemoLink: { Ecommerce: "https://e-commerce-d1b62.web.app/home" },
+    liveDemoLink: { "Front-end": "https://e-commerce-d1b62.web.app/home" },
     previewTechStack: "Javascript, React, Node, Express, GraphQl, Apollo, AWS",
-    gitHubLink: { Ecommerce: "https://github.com/Kwarn/e-commerce" },
+    gitHubLink: {
+      "Front-end": "https://github.com/Kwarn/e-commerce",
+      "Back-end": "https://github.com/Kwarn/ecommerce-backend",
+    },
     description: `
     Built on behalf of Q&Y - a flooring wholesaler, the mission is to provide the client with a site they can manage and display their products on, with an end goal of completing the functionality to gain access to the retail market.
     The current work on the site is focused on fleshing out administrator functionality to allow all CRUD operations via the back-end.
@@ -56,7 +59,7 @@ export const projectData = [
     The most valuable experience I gained from these projects was converting between different approaches within each project, this gave me a solid understanding of the core principles and the varying ways of achieving them.
     `,
     technicalPractices: ` The REST API uses EJS to serve HTML, nodemailer for signup & password reset processes, csurf with express-sessions and connect-mongodb-session, stripe for mock payments and pdfkit to generate invoices.
-    The app was originally used an SQL database with sequelize and now uses mongoDB with mongoose.
+    The app originally used an SQL database with sequelize and now uses mongoDB with mongoose.
 
     The GraphQL API uses Json-web-token & bcrypt to handle authentication, mongoose with MongoDB to store user data, multer to handle file uploads and express-validator for validation.`,
   },

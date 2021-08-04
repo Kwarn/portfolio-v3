@@ -24,6 +24,7 @@ export const ProjectsHeader = styled.img`
 export const TextContainer = styled.div`
   margin: 20vh auto 2vh auto;
   width: 80%;
+  text-align: center;
   h1 {
     font-family: "Ruluko";
     text-align: center;
@@ -34,9 +35,6 @@ export const TextContainer = styled.div`
   }
   @media (min-width: 900px) {
     max-width: 400px;
-    p {
-      text-align: left;
-    }
   }
   @media (min-width: 1200px) {
     max-width: 600px;
