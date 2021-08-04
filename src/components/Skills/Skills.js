@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  SkillContainer,
-  SkillsContainer,
-  SkillsWrapper,
-  Intersection,
-  TriangleIntersection,
-} from "./SkillsStyles";
+import { SkillContainer, SkillsContainer, SkillsWrapper } from "./SkillsStyles";
 import frontend from "../../assets/frontend.png";
 import backend from "../../assets/backend.png";
 import uxui from "../../assets/uxui.png";

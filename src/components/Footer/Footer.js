@@ -9,6 +9,8 @@ const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
   p {
+    text-align: center;
+    width: 60%;
     margin: auto;
   }
 `;

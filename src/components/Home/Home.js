@@ -1,9 +1,7 @@
 import React from "react";
-// import background from "../../assets/homeBackground1.jpg";
 import background from "../../assets/homeBackground.jpg";
 import githubIcon from "../../assets/github.png";
 import linkedinIcon from "../../assets/linkedin.png";
-import downloadCVIcon from "../../assets/cvicon1.png";
 import whiteDownArrowIcon from "../../assets/whiteDownArrow.png";
 import profileImage from "../../assets/profileImage.png";
 import FileSaver from "file-saver";
@@ -11,7 +9,6 @@ import {
   HomeWrapper,
   Background,
   SocialIconsContainer,
-  SocialIcon,
   HelloText,
   MenuOptionsContainer,
   MenuOption,

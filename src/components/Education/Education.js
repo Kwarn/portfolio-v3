@@ -31,16 +31,16 @@ export default function Education({ educationRef, modalHandler }) {
       </EducationHeader>
       <TextSectionsContainer ref={educationRef}>
         <p>
-          I practice a methodical strategy to learning which has been
+          I practice a methodical approach to learning which has been
           fundamental in maintaining consistent progress and positivity, while
           also greatly improving my understanding and knowledge retention.
         </p>
         <br />
         <p>
-          This is done through challenging myself to attempt solving problems
-          before immediately searching for a solution, I've found this to better
-          train my logical reasoning abilities and makes me better aware of the
-          value of any solutions I later find.
+          I have found by challenging myself to attempt solving problems before
+          searching for a solution, I further exercise my logical reasoning
+          abilities which allows me to greater appreciate the value of any
+          solutions I later find.
         </p>
         <br />
         <p>
