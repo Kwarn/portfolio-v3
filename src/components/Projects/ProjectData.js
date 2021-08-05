@@ -41,30 +41,6 @@ export const projectData = [
     The backend is a Node Express server which uses GraphQL for handling most requests, with the exception of storing images which uses a REST endpoint with multer-s3 to store images in an AWS S3 bucket.`,
   },
   {
-    title: "Node projects",
-    images: [nodeProjectsImage1, nodeProjectsImage2],
-    liveDemoLink: "",
-    previewTechStack: "Javascript, Node, Graphql, MongoDB, AWS",
-    gitHubLink: {
-      "Server-side rendered":
-        "https://github.com/Kwarn/node-the-complete-guide",
-
-      "GraphQl-blog": "https://github.com/Kwarn/blog-REST-API/",
-
-      "Blog front-end": "https://github.com/Kwarn/blog-frontend",
-    },
-    description: `
-    During my research on how to build the backend for my current project I decided to take a comprehensive NodeJs course to gain a more complete understanding of backend systems instead of piecing things together from docs & smaller tutorials.
-     These project were built & customized along the way.
-    The most valuable experience I gained from these projects was converting between different approaches within each project, this gave me a solid understanding of the core principles and the varying ways of achieving them.
-    `,
-    technicalPractices: ` The REST API uses EJS to serve HTML, nodemailer for signup & password reset processes, csurf with express-sessions and connect-mongodb-session, stripe for mock payments and pdfkit to generate invoices.
-    The app originally used an SQL database with sequelize and now uses mongoDB with mongoose.
-
-    The GraphQL API uses Json-web-token & bcrypt to handle authentication, mongoose with MongoDB to store user data, multer to handle file uploads and express-validator for validation.`,
-  },
-
-  {
     title: "Portfolios",
     images: [
       portfolioV2Image1,
@@ -84,10 +60,30 @@ export const projectData = [
       v2: "https://github.com/Kwarn/portfolio",
     },
     description: `
-       As I have improved over the years I've updated my portfolio to serve as a live example of my progress.
-         The functionality of the v2 portfolio is likely more technically impressive than the portfolio you're currently viewing, however I felt the complexity of the design was ultimately detrimental to the UX, along with some pitfalls of experimenting with a less conventional desktop-first approach to responsiveness.`,
+    As I have improved over the years I've updated my portfolio to serve as a live example of my progress.
+    The functionality of the v2 portfolio is likely more technically impressive than the portfolio you're currently viewing, however I felt the complexity of the design was ultimately detrimental to the UX, along with some pitfalls of experimenting with a less conventional desktop-first approach to responsiveness.`,
     technicalPractices:
       "IntersectionObserver API for LazyLoading & scroll-to navigation, Function throttling to prevent scrolling through menu too quickly, EmailJS API allowing direct messaging from React to inbox, File-saver library for direct downloading of CV from react, Form validation, Fully responsive design catering from 4k users to 320x568 iPhone 5 users",
+  },
+  {
+    title: "Node projects",
+    images: [nodeProjectsImage1, nodeProjectsImage2],
+    liveDemoLink: "",
+    previewTechStack: "Javascript, Node, Graphql, MongoDB, AWS",
+    gitHubLink: {
+      "REST API": "https://github.com/Kwarn/node-the-complete-guide",
+
+      "GraphQl API": "https://github.com/Kwarn/blog-REST-API/",
+
+      "GraphQL front-end": "https://github.com/Kwarn/blog-frontend",
+    },
+    description: `
+    The most valuable experience I gained from these projects was converting between different approaches within each project, this gave me a solid understanding of the core principles and the varying ways of achieving them.
+    `,
+    technicalPractices: ` The REST API uses EJS to serve HTML, nodemailer for signup & password reset processes, csurf with express-sessions and connect-mongodb-session, stripe for mock payments and pdfkit to generate invoices.
+    The app originally used an SQL database with sequelize and now uses mongoDB with mongoose.
+
+    The GraphQL API uses Json-web-token & bcrypt to handle authentication, mongoose with MongoDB to store user data, multer to handle file uploads and express-validator for validation.`,
   },
   {
     title: "Other JS projects",
@@ -106,7 +102,6 @@ export const projectData = [
       "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
     description: `
     These are a few of my earlier projects.
-
     Sales Feedback: Designed to work like SalesForce, displays analytics charts based on feedback from successful/failed lettings, on hold while current project takes precedence.
     Burger builder: Create and order your own customized burger.
     Slots Game: based on Math.random() my first attempt at react.

@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { projectData } from "./ProjectData";
 import ProjectOverview from "./ProjectOverview/ProjectOverview";
 import ProjectTechnical from "./ProjectTechnical/ProjectTechnical";
 import projectsBackground from "../../assets/background5.jpg";
+import FullProject from "./FullProject/FullProject";
 import {
   ProjectsWrapper,
   ProjectsHeader,
   TextContainer,
   ProjectTile,
   ProjectsFooter,
+  ProjectsTileContainer,
+  ProjectTileTextContainer,
+  MainContent,
 } from "./ProjectsStyles";
 
 export default function Projects({ projectsRef, modalHandler }) {
+  const [selectedProject, setSelectedProject] = useState(0);
+  const [hoveredElementIndex, setHoveredElementIndex] = useState(null);
+
+  const hoverHandler = (elementIndex) => {
+    if (selectedProject === elementIndex) return;
+    setHoveredElementIndex(elementIndex);
+  };
+
   const ProjectOverviews = [];
   const ProjectTechnicals = [];
+  const FullProjectElements = [];
+
+  projectData.forEach((p) => {
+    FullProjectElements.push(
+      <FullProject modalHandler={modalHandler} {...p} />
+    );
+  });
 
   projectData.forEach((p) => {
     ProjectOverviews.push(
-      <ProjectOverview key={`${p.title} overview`} {...p} />
+      <ProjectOverview
+        key={`${p.title} overview`}
+        {...p}
+        modalHandler={modalHandler}
+      />
     );
     ProjectTechnicals.push(
       <ProjectTechnical
@@ -38,24 +61,37 @@ export default function Projects({ projectsRef, modalHandler }) {
           implementation of popular components and design principles.
         </p>
       </TextContainer>
-      {projectData.map((project, i) => (
-        <ProjectTile
-          key={`${project.title} tile`}
-          onClick={() =>
-            modalHandler({
-              isVisible: true,
-              contentArray: [
-                [ProjectOverviews[i]],
-                [ProjectTechnicals[i]],
-                ...project.images,
-              ],
-            })
-          }
-        >
-          <h2>{project.title}</h2>
-          <p>{project.previewTechStack}</p>
-        </ProjectTile>
-      ))}
+      <ProjectsTileContainer>
+        {projectData.map((project, i) => (
+          <ProjectTile
+            key={`${project.title} tile`}
+            gridRowStart={i + 1}
+            isSelected={selectedProject === i}
+            isHovered={hoveredElementIndex === i}
+            isNextProject={!(selectedProject > 0) && selectedProject === i - 1}
+            onMouseEnter={() => setHoveredElementIndex(i)}
+            onMouseLeave={() => setHoveredElementIndex(null)}
+            onClick={() =>
+              window.innerWidth < 1200
+                ? modalHandler({
+                    isVisible: true,
+                    contentArray: [
+                      [ProjectOverviews[i]],
+                      [ProjectTechnicals[i]],
+                      ...project.images,
+                    ],
+                  })
+                : setSelectedProject(i)
+            }
+          >
+            <ProjectTileTextContainer>
+              <h2>{project.title}</h2>
+              <p>{project.previewTechStack}</p>
+            </ProjectTileTextContainer>
+          </ProjectTile>
+        ))}
+        <MainContent>{FullProjectElements[selectedProject]}</MainContent>
+      </ProjectsTileContainer>
       <ProjectsFooter>
         A full list of my projects can be found{" "}
         <a

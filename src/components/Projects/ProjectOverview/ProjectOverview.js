@@ -1,11 +1,16 @@
 import React from "react";
+import { createLinks } from "../../../shared/createProjectElements";
+import ProjectTechnical from "../ProjectTechnical/ProjectTechnical";
+
 import {
   ProjectWrapper,
+  ProjectImagesContainer,
+  ProjectImage,
   ProjectTitle,
   LinksWrapper,
   LinksContainer,
   Link,
-  ProjectsFooter,
+  ProjectDescription,
 } from "./ProjectOverviewStyles";
 
 export default function ProjectOverview({
@@ -13,38 +18,11 @@ export default function ProjectOverview({
   description,
   liveDemoLink,
   gitHubLink,
+  images,
+  previewTechStack,
+  technicalPractices,
+  modalHandler,
 }) {
-  const createLinks = (linkData, linkText) => {
-    let links = [];
-    if (typeof linkData === "object") {
-      Object.keys(linkData).forEach((key) => {
-        links.push(
-          <Link
-            key={key}
-            href={linkData[key]}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {key} {linkText}
-          </Link>
-        );
-      });
-    }
-    if (typeof linkData === "string") {
-      links.push(
-        <Link
-          key={linkData}
-          href={linkData}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {linkText}
-        </Link>
-      );
-    }
-    return links;
-  };
-
   return (
     <ProjectWrapper>
       <ProjectTitle>{title}</ProjectTitle>
@@ -66,7 +44,13 @@ export default function ProjectOverview({
           ""
         )}
       </LinksWrapper>
-      <ProjectsFooter>{description}</ProjectsFooter>
+      <ProjectDescription>{description}</ProjectDescription>
+      {window.innerWidth >= 1200 ? (
+        <ProjectTechnical
+          previewTechStack={previewTechStack}
+          technicalPractices={technicalPractices}
+        />
+      ) : null}
     </ProjectWrapper>
   );
 }

@@ -1,22 +1,9 @@
 import React from "react";
-import apollo from "../../../assets/apollo.png";
-import aws from "../../../assets/aws.png";
-import css from "../../../assets/css.png";
-import firebase from "../../../assets/firebase.png";
-import graphql from "../../../assets/graphql.png";
-import javascript from "../../../assets/javascript.png";
-import mongodb from "../../../assets/mongodb.png";
-import node from "../../../assets/node.png";
-import python from "../../../assets/python.png";
-import react from "../../../assets/react.png";
-import redux from "../../../assets/redux.png";
-import reduxsaga from "../../../assets/reduxsaga.png";
-import sqlite3 from "../../../assets/sqlite3.png";
+import { createTechIcons } from "../../../shared/createProjectElements";
 import {
   ProjectTechnicalWrapper,
   TechHeader,
   TechIconsContainer,
-  TechIcon,
   TechText,
 } from "./ProjectTechnicalStyles";
 
@@ -24,35 +11,21 @@ export default function ProjectTechnical({
   previewTechStack,
   technicalPractices,
 }) {
-  const techs = {
-    apollo: apollo,
-    aws: aws,
-    css: css,
-    firebase: firebase,
-    graphql: graphql,
-    javascript: javascript,
-    mongodb: mongodb,
-    node: node,
-    python: python,
-    react: react,
-    redux: redux,
-    "redux-saga": reduxsaga,
-    sqlite3: sqlite3,
-  };
-
-  let techIcons = [];
-  previewTechStack.split(", ").forEach((tech) => {
-    const key = tech.toLowerCase();
-    if (techs[key]) {
-      techIcons.push(<TechIcon key={tech} src={techs[key]} />);
-    }
-  });
+  let techIcons = createTechIcons(previewTechStack);
 
   return (
     <ProjectTechnicalWrapper>
       <TechHeader>Technical Info</TechHeader>
-      <TechIconsContainer>{techIcons}</TechIconsContainer>
-      <TechText>{technicalPractices}</TechText>
+      {window.innerWidth >= 1200 ? (
+        <TechText>{technicalPractices}</TechText>
+      ) : (
+        <TechIconsContainer>{techIcons}</TechIconsContainer>
+      )}
+      {window.innerWidth < 1200 ? (
+        <TechText>{technicalPractices}</TechText>
+      ) : (
+        <TechIconsContainer>{techIcons}</TechIconsContainer>
+      )}
     </ProjectTechnicalWrapper>
   );
 }

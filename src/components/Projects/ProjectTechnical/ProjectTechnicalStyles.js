@@ -11,7 +11,7 @@ export const ProjectTechnicalWrapper = styled.div`
 export const TechHeader = styled.h1`
   margin: auto auto 0 auto;
   @media (min-width: 1200px) {
-    font-size: 50px;
+    display: none;
   }
 `;
 
@@ -27,14 +27,7 @@ export const TechIconsContainer = styled.div`
     width: 30%;
   }
 `;
-export const TechIcon = styled.img`
-  margin: auto;
-  height: 40px;
-  width: auto;
-  @media (min-width: 800px) {
-    height: 50px;
-  }
-`;
+
 export const TechText = styled.p`
   text-align: left;
   margin: 5vh auto auto auto;
@@ -46,7 +39,7 @@ export const TechText = styled.p`
     font-size: 16px;
   }
   @media (min-width: 1200px) {
-    width: 50%;
+    width: 95%;
     font-size: 18px;
   }
 `;
